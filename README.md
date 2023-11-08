@@ -19,3 +19,9 @@ This repository contains packages with robotics development learning purpose.
     - Mono-Camera for Maze Solving using QR
 5. **path_planning**
     - Implementation of Astar, Djikstra , RRT
+6. **autonomous_tb3**
+    - Using turtlebot 3 , Slam Navigation
+    - NAV2 localiation
+    - Python , c++ simple api for nav2
+    - Actions
+    - Architecture
