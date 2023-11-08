@@ -17,3 +17,5 @@ This repository contains packages with robotics development learning purpose.
     - ROS2 based package for learning Sensor Based Data prcessing
     - 2D Lidar for Maze Solving
     - Mono-Camera for Maze Solving using QR
+5. **path_planning**
+    - Implementation of Astar, Djikstra , RRT
