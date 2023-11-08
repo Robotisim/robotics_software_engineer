@@ -13,3 +13,7 @@ This repository contains packages with robotics development learning purpose.
     - ROS2 Basic Simulation understanding
     - Launch file concepts learning .
     - Programmed Inverse Kinematics
+4. **drive_tb3** :
+    - ROS2 based package for learning Sensor Based Data prcessing
+    - 2D Lidar for Maze Solving
+    - Mono-Camera for Maze Solving using QR
