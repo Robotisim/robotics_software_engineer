@@ -9,3 +9,7 @@ This repository contains packages with robotics development learning purpose.
 2. **robot_motion** :
     - Forward Kinematics
     - Inverse Kinematics
+3. **drive_turtle** :
+    - ROS2 Basic Simulation understanding
+    - Launch file concepts learning .
+    - Programmed Inverse Kinematics
