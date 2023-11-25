@@ -1,0 +1,9 @@
+<root BTCPP_format="4">
+  <BehaviorTree ID="BatteryCheckTree">
+    <Sequence name="battery_sequence">
+      <BatteryCharging   name="battery_charging"/>
+      <BatteryTemp       name="battery_temp"/>
+      <BatterySupplying  name="battery_supplying"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

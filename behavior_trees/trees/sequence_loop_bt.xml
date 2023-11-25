@@ -1,0 +1,8 @@
+<root BTCPP_format="4">
+  <BehaviorTree ID="Basic Sequence">
+    <Sequence        name="Drive_Turn">
+      <DriveStraight name="Drive_Straight"/>
+      <TurnRight     name="Turn_Right"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

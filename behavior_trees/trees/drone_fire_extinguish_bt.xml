@@ -1,0 +1,10 @@
+<root BTCPP_format="4">
+  <BehaviorTree ID="FireSafetyTree">
+    <Fallback name="fire_safety_operations">
+      <ExtinguishFire area="Area 1"/>
+      <SendToAmbulance emergency_message="Fire in Area 1, assistance required."/>
+      <ExtinguishFire area="Area 2"/>
+      <SendToAmbulance emergency_message="Fire in Area 2, assistance required."/>
+    </Fallback>
+  </BehaviorTree>
+</root>

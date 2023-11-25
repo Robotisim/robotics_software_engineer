@@ -25,3 +25,6 @@ This repository contains packages with robotics development learning purpose.
     - Python , c++ simple api for nav2
     - Actions
     - Architecture
+7. **behaviour_trees**
+    - Creating Basic behaviour Trees
+    - Understanding ROS2 navigation backend with Behvaiour Trees
