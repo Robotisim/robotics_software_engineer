@@ -1,13 +1,4 @@
-/**
- * Author: Muhammad Luqman
- * Organization: Robotisim
- *
- * This ROS2 node, "turtlesim_straight_line", is a general-purpose controller for a Turtlebot3 robot.
- * It takes the command velocity topic and the linear velocity as parameters,
- * and publishes geometry_msgs/Twist messages to make the robot move.
- *
- * The node can be customized for different robots by changing the parameters.
- */
+
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 

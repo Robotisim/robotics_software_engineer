@@ -15,6 +15,15 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
 )
 
+#----------------------
+add_executable(test_node
+  src/a_b_grid_points_to_grid.cpp
+)
+
+target_link_libraries(test_node ${OpenCV_LIBRARIES} )
+ament_target_dependencies(test_node rclcpp )
+
+#--------------
 
 add_executable(astar_node
   src/main.cpp
@@ -44,6 +53,7 @@ install(DIRECTORY
 
 
 install (TARGETS
+  test_node
   astar_node
   rrt_node
   DESTINATION lib/${PROJECT_NAME}
