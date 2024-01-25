@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<robot>
+  <!-- ros_control plugin -->
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <joint name="joint_1">
+            <command_interface name="position">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="joint_2">
+            <command_interface name="position">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="joint_3">
+            <command_interface name="position">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="joint_4">
+            <command_interface name="position">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="joint_5">
+            <command_interface name="position">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="joint_6">
+            <command_interface name="position">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="left_gripper_finger_joint">
+            <command_interface name="position">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <joint name="right_gripper_finger_joint">
+            <command_interface name="position">
+              <param name="min">-1000</param>
+              <param name="max">1000</param>
+            </command_interface>
+                <state_interface name="position">
+                  <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+  </ros2_control>
+
+<gazebo>
+  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <parameters>$(find kuka_arm_pkg)/config/kuka_arm_controllers.yaml</parameters>
+  </plugin>
+</gazebo>
+
+</robot>

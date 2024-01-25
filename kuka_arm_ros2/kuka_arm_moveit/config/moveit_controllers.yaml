@@ -1,0 +1,27 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - kuka_arm_controller
+    - kuka_gripper_controller
+
+  kuka_arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6
+  kuka_gripper_controller:
+    type: GripperCommand
+    joints:
+      - left_gripper_finger_joint
+      - right_gripper_finger_joint
+    action_ns: gripper_cmd
+    default: true

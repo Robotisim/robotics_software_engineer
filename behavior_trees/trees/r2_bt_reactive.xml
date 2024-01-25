@@ -1,0 +1,9 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="Triangular Movement">
+
+        <ReactiveSequence>
+        	<CheckForObstacles/>
+        	<NavigatePath/>
+    </ReactiveSequence>
+    </BehaviorTree>
+</root>

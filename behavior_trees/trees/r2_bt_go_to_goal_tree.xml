@@ -1,0 +1,17 @@
+<root BTCPP_format="4">
+    <TreeNodesModel>
+        <Action ID="OrientTowardsGoal"/>
+        <Action ID="MoveTowardsGoal"/>
+        <Condition ID="CheckGoalReached"/>
+    </TreeNodesModel>
+
+  <BehaviorTree ID="path_following_sequence">
+      <Fallback name="goal">
+        <CheckGoalReached goal_x="{goal_x}" goal_y="{goal_y}"/>
+        <Sequence>
+          <OrientTowardsGoal goal_x="{goal_x}" goal_y="{goal_y}"/>
+          <MoveTowardsGoal goal_x="{goal_x}" goal_y="{goal_y}"/>
+        </Sequence>
+      </Fallback>
+  </BehaviorTree>
+</root>

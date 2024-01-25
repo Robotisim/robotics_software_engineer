@@ -125,9 +125,9 @@ def generate_launch_description():
     ld.add_action(gzserver_cmd)
     ld.add_action(gzclient_cmd)
     ld.add_action(robot_spawner1)
-    ld.add_action(robot_spawner2)
-    ld.add_action(robot_spawner3)
-    ld.add_action(robot_spawner4)
+    # ld.add_action(robot_spawner2)
+    # ld.add_action(robot_spawner3)
+    # ld.add_action(robot_spawner4)
 
     # Return the LaunchDescription
     return ld

@@ -1,18 +1,14 @@
-// Grid data not used for obstacles
-//  start stop points values are indexes?
-// How to give start and stop points
-//
-
 #include <cmath>
-#include <geometry_msgs/msg/point.hpp>
-#include <geometry_msgs/msg/pose_stamped.hpp>
 #include <limits>
 #include <memory>
+#include <queue>
+#include <vector>
+
+#include <geometry_msgs/msg/point.hpp>
+#include <geometry_msgs/msg/pose_stamped.hpp>
 #include <nav_msgs/msg/occupancy_grid.hpp>
 #include <nav_msgs/msg/path.hpp>
-#include <queue>
 #include <rclcpp/rclcpp.hpp>
-#include <vector>
 
 class Astar_Node {
 public:
@@ -20,11 +16,9 @@ public:
   float g_cost, h_cost, f_cost;
   std::shared_ptr<Astar_Node> parent;
 
-  // Constructor
   Astar_Node(int x, int y, std::shared_ptr<Astar_Node> parent = nullptr)
       : x(x), y(y), g_cost(0), h_cost(0), f_cost(0), parent(parent) {}
 
-  // Setters for costs
   void set_gcost(float cost) {
     g_cost = cost;
     f_cost = g_cost + h_cost;
@@ -62,15 +56,15 @@ public:
   }
 
 private:
-std::pair<int, int> indexToCoordinates(int index, int width) {
-  if (index < 0 || index >= width * width) {
-    RCLCPP_ERROR(this->get_logger(), "Index out of bounds");
-    return {-1, -1}; // Return an invalid coordinate
+  std::pair<int, int> indexToCoordinates(int index, int width) {
+    if (index < 0 || index >= width * width) {
+      RCLCPP_ERROR(this->get_logger(), "Index out of bounds");
+      return {-1, -1}; // Return an invalid coordinate
+    }
+    int y = index / width;
+    int x = index % width;
+    return {x, y};
   }
-  int y = index / width;
-  int x = index % width;
-  return {x, y};
-}
   void occupancyGridCallback(const nav_msgs::msg::OccupancyGrid &grid) {
     int grid_width = grid.info.width;
     int grid_height = grid.info.height;
@@ -91,17 +85,21 @@ std::pair<int, int> indexToCoordinates(int index, int width) {
     auto start_coords = indexToCoordinates(0, grid_width);
     auto goal_coords = indexToCoordinates(89, grid_width);
 
-    //  RCLCPP_INFO(this->get_logger(), "Raw start coords: (%d, %d), Raw goal coords: (%d, %d)",
-    //           start_coords.first, start_coords.second, goal_coords.first, goal_coords.second);
-
+    //  RCLCPP_INFO(this->get_logger(), "Raw start coords: (%d, %d), Raw goal
+    //  coords: (%d, %d)",
+    //           start_coords.first, start_coords.second, goal_coords.first,
+    //           goal_coords.second);
 
     // Use class member variables directly
     this->start_point.x = static_cast<float>(start_coords.first);
     this->start_point.y = static_cast<float>(start_coords.second);
     this->goal_point.x = static_cast<float>(goal_coords.first);
     this->goal_point.y = static_cast<float>(goal_coords.second);
-      // Print start and goal points
-       RCLCPP_INFO(this->get_logger(), "Starting point: (%f, %f) - Goal point: (%f, %f)", this->start_point.x, this->start_point.y,this->goal_point.x, this->goal_point.y);
+    // Print start and goal points
+    RCLCPP_INFO(this->get_logger(),
+                "Starting point: (%f, %f) - Goal point: (%f, %f)",
+                this->start_point.x, this->start_point.y, this->goal_point.x,
+                this->goal_point.y);
     // RCLCPP_INFO(this->get_logger(), "Map Width: %d, Map Height: %d",
     // grid_width, grid_height);
     std::priority_queue<std::shared_ptr<Astar_Node>,
@@ -131,8 +129,9 @@ std::pair<int, int> indexToCoordinates(int index, int width) {
       auto current_node = open_list.top();
       open_list.pop();
 
-       RCLCPP_DEBUG(this->get_logger(), "Checking node at (%d, %d) against goal (%d, %d)",
-               current_node->x, current_node->y, goal_point.x, goal_point.y);
+      RCLCPP_DEBUG(
+          this->get_logger(), "Checking node at (%d, %d) against goal (%d, %d)",
+          current_node->x, current_node->y, goal_point.x, goal_point.y);
       // Check if goal is reached
 
       if (current_node->x == goal_point.x && current_node->y == goal_point.y) {
@@ -181,7 +180,8 @@ std::pair<int, int> indexToCoordinates(int index, int width) {
       for (auto dir : directions) {
         int new_x = current_node->x + dir.first;
         int new_y = current_node->y + dir.second;
-        RCLCPP_DEBUG(this->get_logger(), "Considering neighbor at (%d, %d)", new_x, new_y);
+        RCLCPP_DEBUG(this->get_logger(), "Considering neighbor at (%d, %d)",
+                     new_x, new_y);
 
         // Check if new node is within the grid and not an obstacle
         if (new_x >= 0 && new_x < grid_width && new_y >= 0 &&
@@ -207,7 +207,7 @@ std::pair<int, int> indexToCoordinates(int index, int width) {
               open_list.push(neighbor);
               cost_so_far[new_x][new_y] = new_cost;
             }
-}
+          }
         }
       }
     }
@@ -218,7 +218,6 @@ std::pair<int, int> indexToCoordinates(int index, int width) {
   rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr path_publisher_;
   geometry_msgs::msg::Point start_point;
   geometry_msgs::msg::Point goal_point;
-
 };
 
 int main(int argc, char *argv[]) {
@@ -228,3 +227,4 @@ int main(int argc, char *argv[]) {
   rclcpp::shutdown();
   return 0;
 }
+
