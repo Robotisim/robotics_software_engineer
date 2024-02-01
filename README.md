@@ -1,5 +1,9 @@
 ### Robotics Softaware Engineer
-This repository contains packages with robotics development learning purpose.
+- Build your self from basic programming understanding to Market demand
+   
+![main](https://github.com/Robotisim/robotics_software_engineer/assets/29896241/c6f3b194-76aa-4a2b-b88c-008738157396)
+
+
 1. **robot_motion** :
     - C++ Brushup : Single File vs Cmakelists based C++ Programming
     - Easy debugging , efficient code and scalable development
@@ -38,3 +42,5 @@ This repository contains packages with robotics development learning purpose.
 12. **drive_drone**
     - Bring Drone and learn Gazebo motion
     - Perform computer vision based Robot Follower
+
+
