@@ -1,0 +1,42 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    kuka_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    kuka_gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+kuka_arm_controller:
+  ros__parameters:
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6
+    interface_name: position
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+kuka_gripper_controller:
+  ros__parameters:
+    joints:
+      - left_gripper_finger_joint
+      - right_gripper_finger_joint
+    interface_name: position
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

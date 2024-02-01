@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/luqman/robotisim_ws/install/sjtu_drone_description/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/luqman/robotisim_ws/src/drones_ROS2/drive_drone/include/**",
+        "/home/luqman/robotisim_ws/src/drones_ROS2/sjtu_drone/sjtu_drone_description/include/**",
+        "/home/luqman/robotisim_ws/src/robotics_software_engineer/behavior_trees/include/**",
+        "/home/luqman/robotisim_ws/src/robotics_software_engineer/custom_action_service_message/include/**",
+        "/home/luqman/robotisim_ws/src/robotics_software_engineer/path_planning/include/**",
+        "/home/luqman/robotisim_ws/src/robotics_software_engineer/point_clouds/include/**",
+        "/home/luqman/robotisim_ws/src/robotics_software_engineer/robot_motion/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,20 @@
+<root BTCPP_format="4">
+    <TreeNodesModel>
+        <Action ID="CheckDistance"/>
+        <Action ID="TurnLeft"/>
+        <Action ID="MoveForward"/>
+    </TreeNodesModel>
+
+    <BehaviorTree ID="ObstacleAvoidanceTree">
+        <Fallback name="navigate">
+            <Sequence name="check_and_move">
+                <CheckDistance sensor_distance="{obstacle_distance}"/>
+                <MoveForward sensor_distance="{obstacle_distance}"/>
+            </Sequence>
+            <TurnLeft/>
+        </Fallback>
+    </BehaviorTree>
+</root>
+
+
+

@@ -1,0 +1,23 @@
+<root BTCPP_format="4">
+    <TreeNodesModel>
+        <Condition ID="CheckBattery"/>
+        <Action ID="DriveStraight"/>
+        <Action ID="TurnRight"/>
+        <Action ID="TangentMove"/>
+    </TreeNodesModel>
+
+    <BehaviorTree ID="Triangular Movement">
+        <Sequence name="Main Seq">
+            <CheckBattery name="Battery_Check"/>
+            <Sequence name="Straight_Turn Seq">
+                <DriveStraight name="Drive_Straight_1"/>
+                <TurnRight name="Turn_Right_1"/>
+            </Sequence>
+
+            <Sequence name="Drive_Tangent Seq">
+                <TangentMove name="Tangent_Move"/>
+            </Sequence>
+
+        </Sequence>
+    </BehaviorTree>
+</root>
