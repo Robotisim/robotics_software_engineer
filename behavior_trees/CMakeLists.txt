@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(turtlesim REQUIRED)
+find_package(nav_msgs REQUIRED)
 
 # Non ROS2 BT examples
 add_executable(a_bt_sequence_nodes src/bt_sequence_nodes.cpp)
