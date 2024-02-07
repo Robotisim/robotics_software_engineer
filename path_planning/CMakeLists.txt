@@ -9,41 +9,30 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
 
 include_directories(
   include
   ${OpenCV_INCLUDE_DIRS}
 )
 
-#----------------------
-add_executable(test_node
-  src/a_b_grid_points_to_grid.cpp
-)
-
-target_link_libraries(test_node ${OpenCV_LIBRARIES} )
-ament_target_dependencies(test_node rclcpp )
-
-#--------------
-
-add_executable(astar_node
-  src/main.cpp
-  src/Astar.cpp
-  src/Dijkstra.cpp
-)
-
-target_link_libraries(astar_node ${OpenCV_LIBRARIES} )
-ament_target_dependencies(astar_node rclcpp )
+# Occupancy Grid
+add_executable(occupancy_grid_node src/occupancy_grid.cpp )
+ament_target_dependencies(occupancy_grid_node rclcpp nav_msgs tf2_ros )
 
 
-add_executable(rrt_node
-  src/main_rrt.cpp
-  src/rrt.cpp
-)
-
-target_link_libraries(rrt_node ${OpenCV_LIBRARIES} )
-ament_target_dependencies(rrt_node rclcpp )
+# Astar Opencv based
+add_executable(astar_ros2_node  src/astar_ros2.cpp )
+target_link_libraries(astar_ros2_node ${OpenCV_LIBRARIES} )
+ament_target_dependencies(astar_ros2_node rclcpp  geometry_msgs nav_msgs)
 
 
+# Astar Ros2- Rviz Based
+add_executable(astar_opencv_node  src/astar_opencv.cpp )
+target_link_libraries(astar_opencv_node ${OpenCV_LIBRARIES} )
+ament_target_dependencies(astar_opencv_node rclcpp )
 
 
 install(DIRECTORY
@@ -53,9 +42,9 @@ install(DIRECTORY
 
 
 install (TARGETS
-  test_node
-  astar_node
-  rrt_node
+  occupancy_grid_node
+  astar_ros2_node
+  astar_opencv_node
   DESTINATION lib/${PROJECT_NAME}
 
 )
