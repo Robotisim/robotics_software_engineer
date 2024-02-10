@@ -1,0 +1,2 @@
+sensor_msgs/Image camera_data
+sensor_msgs/LaserScan lidar_data
