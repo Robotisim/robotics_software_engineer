@@ -2,6 +2,7 @@
 #include <limits>
 #include <memory>
 #include <queue>
+#include <random>
 #include <vector>
 
 #include <geometry_msgs/msg/point.hpp>
@@ -10,45 +11,33 @@
 #include <nav_msgs/msg/path.hpp>
 #include <rclcpp/rclcpp.hpp>
 
-class Astar_Node {
+class RRT_Node {
 public:
   int x, y;
-  float g_cost, h_cost, f_cost;
-  std::shared_ptr<Astar_Node> parent;
 
-  Astar_Node(int x, int y, std::shared_ptr<Astar_Node> parent = nullptr)
-      : x(x), y(y), g_cost(0), h_cost(0), f_cost(0), parent(parent) {}
+  std::shared_ptr<RRT_Node> parent;
 
-  void set_gcost(float cost) {
-    g_cost = cost;
-    f_cost = g_cost + h_cost;
-  }
+  RRT_Node(int x, int y, std::shared_ptr<RRT_Node> parent = nullptr)
+      : x(x), y(y), parent(parent) {}
 
-  void set_hcost(float cost) {
-    h_cost = cost;
-    f_cost = g_cost + h_cost;
-  }
-};
-struct compare_node {
-  bool operator()(const std::shared_ptr<Astar_Node> &a,
-                  const std::shared_ptr<Astar_Node> &b) {
-    return a->f_cost > b->f_cost;
-  }
+  void set_parent(std::shared_ptr<RRT_Node> new_parent) { parent = new_parent; }
+
+  std::shared_ptr<RRT_Node> get_parent() { return parent; }
 };
 
 float heuristic(int x1, int y1, int x2, int y2) {
   return std::sqrt(std::pow(x1 - x2, 2) + std::pow(y1 - y2, 2));
 }
 
-class AstarNode : public rclcpp::Node {
+class RRTNode : public rclcpp::Node {
 public:
-  AstarNode() : Node("astar_node") {
-    RCLCPP_INFO(this->get_logger(), "Performing Astar Search");
+  RRTNode() : Node("rrt_node"), generator_(std::random_device{}()) {
+    RCLCPP_INFO(this->get_logger(), "Performing RRT Search");
 
     occupancy_grid_subscriber_ =
         this->create_subscription<nav_msgs::msg::OccupancyGrid>(
             "occupancy_grid", 10,
-            std::bind(&AstarNode::occupancyGridCallback, this,
+            std::bind(&RRTNode::occupancyGridCallback, this,
                       std::placeholders::_1));
 
     // Publishers for the path
@@ -56,6 +45,7 @@ public:
   }
 
 private:
+  std::default_random_engine generator_;
   std::pair<int, int> indexToCoordinates(int index, int width) {
     if (index < 0 || index >= width * width) {
       RCLCPP_ERROR(this->get_logger(), "Index out of bounds");
@@ -65,6 +55,43 @@ private:
     int x = index % width;
     return {x, y};
   }
+
+  bool obstacleFree(int x1, int y1, int x2, int y2,
+                    const nav_msgs::msg::OccupancyGrid &grid) {
+    int grid_width = grid.info.width;
+    int grid_height = grid.info.height;
+    const auto &grid_data = grid.data;
+
+    // Check if the line between the two points is obstacle free
+    int dx = std::abs(x2 - x1);
+    int dy = std::abs(y2 - y1);
+    int x = x1;
+    int y = y1;
+    int n = 1 + dx + dy;
+    int x_inc = (x2 > x1) ? 1 : -1;
+    int y_inc = (y2 > y1) ? 1 : -1;
+    int error = dx - dy;
+    dx *= 2;
+    dy *= 2;
+
+    for (; n > 0; --n) {
+      if (x < 0 || x >= grid_width || y < 0 || y >= grid_height) {
+        return false;
+      }
+      if (grid_data[x + y * grid_width] != 0) {
+        return false;
+      }
+      if (error > 0) {
+        x += x_inc;
+        error -= dy;
+      } else {
+        y += y_inc;
+        error += dx;
+      }
+    }
+    return true;
+  }
+
   void occupancyGridCallback(const nav_msgs::msg::OccupancyGrid &grid) {
     int grid_width = grid.info.width;
     int grid_height = grid.info.height;
@@ -78,6 +105,7 @@ private:
       else if (cell == 100)
         occupied_cells++;
     }
+
     // RCLCPP_INFO(this->get_logger(), "Free cells: %d, Occupied cells: %d",
     //             free_cells, occupied_cells);
 
@@ -102,44 +130,50 @@ private:
                 this->goal_point.y);
     // RCLCPP_INFO(this->get_logger(), "Map Width: %d, Map Height: %d",
     // grid_width, grid_height);
-    std::priority_queue<std::shared_ptr<Astar_Node>,
-                        std::vector<std::shared_ptr<Astar_Node>>, compare_node>
-        open_list;
+    std::vector<std::shared_ptr<RRT_Node>> tree;
+    tree.push_back(std::make_shared<RRT_Node>(static_cast<int>(start_point.x),
+                                              static_cast<int>(start_point.y)));
 
-    std::vector<std::vector<float>> cost_so_far(
-        grid_height,
-        std::vector<float>(grid_width, std::numeric_limits<float>::max()));
-    std::vector<std::vector<bool>> closed_list(
-        grid_height, std::vector<bool>(grid_width, false));
+    std::uniform_int_distribution<int> distribution(0,
+                                                    grid_width * grid_height);
 
-    auto start_node = std::make_shared<Astar_Node>(
-        static_cast<int>(start_point.x), static_cast<int>(start_point.y));
-    start_node->set_gcost(0);
-    start_node->set_hcost(heuristic(start_node->x, start_node->y,
-                                    static_cast<int>(goal_point.x),
-                                    static_cast<int>(goal_point.y)));
+    int max_iterations = 1000;
+    float step_size = 1.0f;
 
-    open_list.push(start_node);
-    cost_so_far[start_point.x][start_point.y] = 0;
+    for (int i = 0; i < max_iterations; i++) {
+      int random_index = distribution(generator_);
+      auto random_coords = indexToCoordinates(random_index, grid_width);
+      auto random_node =
+          std::make_shared<RRT_Node>(random_coords.first, random_coords.second);
+      auto nearest_node = tree[0];
+      float min_distance = std::numeric_limits<float>::max();
+      for (auto node : tree) {
+        float distance =
+            heuristic(node->x, node->y, random_node->x, random_node->y);
+        RCLCPP_DEBUG(this->get_logger(),
+                     "Checking node at (%d, %d) against goal (%d, %d)", node->x,
+                     node->y, random_node->x, random_node->y);
+        if (distance < min_distance) {
+          if (obstacleFree(node->x, node->y, random_node->x, random_node->y,
+                            grid)) {
+            min_distance = distance;
+            nearest_node = node;
+          }
+        }
+      }
+      // Add the random node to the tree
+      tree.push_back(random_node);
+      random_node->set_parent(nearest_node);
+      RCLCPP_DEBUG(this->get_logger(), "Added node at (%d, %d) to the tree",
+                   random_node->x, random_node->y);
+      // Check if the random node is close to the goal
 
-    std::vector<std::pair<int, int>> directions = {
-        {0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {-1, 1}, {1, -1}, {-1, -1}};
-
-    while (!open_list.empty()) {
-      auto current_node = open_list.top();
-      open_list.pop();
-
-      RCLCPP_DEBUG(
-          this->get_logger(), "Checking node at (%d, %d) against goal (%f, %f)",
-          current_node->x, current_node->y, goal_point.x, goal_point.y);
-      // Check if goal is reached
-
-      if (current_node->x == goal_point.x && current_node->y == goal_point.y) {
+      if (heuristic(random_node->x, random_node->y, goal_point.x,
+                    goal_point.y) < step_size) {
+        RCLCPP_INFO(this->get_logger(), "Found path to goal");
         std::vector<geometry_msgs::msg::PoseStamped> path_reversed;
-
-        auto path_node = current_node;
-        int node_count = 0; // Initialize a counter for the number of nodes
-
+        auto path_node = random_node;
+        int node_count = 0;
         while (path_node != nullptr) {
           node_count++;
           geometry_msgs::msg::PoseStamped pose;
@@ -147,68 +181,25 @@ private:
           pose.header.stamp = grid.header.stamp;
           pose.pose.position.x = path_node->x - 5.0;
           pose.pose.position.y = path_node->y - 5.0;
-          pose.pose.position.z = 0;      // Assuming a 2D plane
-          pose.pose.orientation.w = 1.0; // No rotation
-
+          pose.pose.position.z = 0;
+          pose.pose.orientation.w = 1.0;
           path_reversed.push_back(pose);
           path_node = path_node->parent;
         }
         RCLCPP_INFO(this->get_logger(),
                     "Found goal path. Total number of nodes in the path: %d",
                     node_count);
-
-        // Reverse the path to get it from start to goal
         std::vector<geometry_msgs::msg::PoseStamped> path;
         for (auto it = path_reversed.rbegin(); it != path_reversed.rend();
              ++it) {
           path.push_back(*it);
         }
         nav_msgs::msg::Path path_msg;
-        path_msg.header.frame_id =
-            grid.header.frame_id; // Same frame as the occupancy grid
+        path_msg.header.frame_id = grid.header.frame_id;
         path_msg.header.stamp = grid.header.stamp;
         path_msg.poses = path;
-
         path_publisher_->publish(path_msg);
-
         break;
-      }
-
-      closed_list[current_node->x][current_node->y] = true;
-
-      // Explore neighbors
-      for (auto dir : directions) {
-        int new_x = current_node->x + dir.first;
-        int new_y = current_node->y + dir.second;
-        RCLCPP_DEBUG(this->get_logger(), "Considering neighbor at (%d, %d)",
-                     new_x, new_y);
-
-        // Check if new node is within the grid and not an obstacle
-        if (new_x >= 0 && new_x < grid_width && new_y >= 0 &&
-            new_y < grid_height) {
-          int new_index = new_y * grid_width + new_x;
-          if (grid_data[new_index] == 100) { // Check if the cell is an obstacle
-            continue;
-          }
-
-          float new_cost =
-              current_node->g_cost +
-              ((dir.first == 0 || dir.second == 0) ? 1.0 : std::sqrt(2));
-
-          if (new_x >= 0 && new_x < grid_width && new_y >= 0 &&
-              new_y < grid_height && !closed_list[new_x][new_y]) {
-            auto neighbor =
-                std::make_shared<Astar_Node>(new_x, new_y, current_node);
-
-            if (new_cost < cost_so_far[new_x][new_y]) {
-              neighbor->set_gcost(new_cost);
-              neighbor->set_hcost(heuristic(neighbor->x, neighbor->y,
-                                            goal_point.x, goal_point.y));
-              open_list.push(neighbor);
-              cost_so_far[new_x][new_y] = new_cost;
-            }
-          }
-        }
       }
     }
   }
@@ -222,7 +213,7 @@ private:
 
 int main(int argc, char *argv[]) {
   rclcpp::init(argc, argv);
-  auto node = std::make_shared<AstarNode>();
+  auto node = std::make_shared<RRTNode>();
   rclcpp::spin(node);
   rclcpp::shutdown();
   return 0;
