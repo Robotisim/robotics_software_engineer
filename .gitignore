@@ -35,3 +35,5 @@ build/
 .auto-type/
 
 .vscode
+
+src/robotics_software_engineer/.vscode
