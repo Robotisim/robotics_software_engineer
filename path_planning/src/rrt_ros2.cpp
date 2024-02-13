@@ -64,39 +64,63 @@ private:
 		int grid_height = grid.info.height;
 		auto const& grid_data = grid.data;
 
-		// Check if the line between the two points is obstacle free
-		int dx = std::abs(x2 - x1);
-		int dy = std::abs(y2 - y1);
-		int x = x1;
-		int y = y1;
-		int n = 1 + dx + dy;
-		int x_inc = (x2 > x1) ? 1 : -1;
-		int y_inc = (y2 > y1) ? 1 : -1;
-		int error = dx - dy;
-		dx *= 2;
-		dy *= 2;
+		int num_samples = 10; // Number of points to sample along the line
 
-		for (; n > 0; --n) {
-			RCLCPP_DEBUG(this->get_logger(), "Checking point (%d, %d) with value %d", x, y, grid_data[x + y * grid_width]);
+		for (int i = 0; i <= num_samples; ++i) {
+			float alpha = static_cast<float>(i) / num_samples;
+			int x = static_cast<int>(x1 + alpha * (x2 - x1));
+			int y = static_cast<int>(y1 + alpha * (y2 - y1));
+
 			if (x < 0 || x >= grid_width || y < 0 || y >= grid_height) {
-				RCLCPP_DEBUG(this->get_logger(), "Point (%d, %d) out of bounds", x, y);
+				return false; // Point is out of bounds
+			}
 
-				return false;
-			}
 			if (grid_data[x + y * grid_width] != 0) {
-				RCLCPP_DEBUG(this->get_logger(), "Collision at point (%d, %d)", x, y);
-				return false;
-			}
-			if (error > 0) {
-				x += x_inc;
-				error -= dy;
-			} else {
-				y += y_inc;
-				error += dx;
+				return false; // Collision at this point
 			}
 		}
-		return true;
+
+		return true; // No collision detected
 	}
+
+	// bool obstacleFree(int x1, int y1, int x2, int y2, nav_msgs::msg::OccupancyGrid const& grid) {
+	// 	int grid_width = grid.info.width;
+	// 	int grid_height = grid.info.height;
+	// 	auto const& grid_data = grid.data;
+
+	// 	// Check if the line between the two points is obstacle free
+	// 	int dx = std::abs(x2 - x1);
+	// 	int dy = std::abs(y2 - y1);
+	// 	int x = x1;
+	// 	int y = y1;
+	// 	int n = 1 + dx + dy;
+	// 	int x_inc = (x2 > x1) ? 1 : -1;
+	// 	int y_inc = (y2 > y1) ? 1 : -1;
+	// 	int error = dx - dy;
+	// 	dx *= 2;
+	// 	dy *= 2;
+
+	// 	for (; n > 0; --n) {
+	// 		RCLCPP_DEBUG(this->get_logger(), "Checking point (%d, %d) with value %d", x, y, grid_data[x + y * grid_width]);
+	// 		if (x < 0 || x >= grid_width || y < 0 || y >= grid_height) {
+	// 			RCLCPP_DEBUG(this->get_logger(), "Point (%d, %d) out of bounds", x, y);
+
+	// 			return false;
+	// 		}
+	// 		if (grid_data[x + y * grid_width] != 0) {
+	// 			RCLCPP_DEBUG(this->get_logger(), "Collision at point (%d, %d)", x, y);
+	// 			return false;
+	// 		}
+	// 		if (error > 0) {
+	// 			x += x_inc;
+	// 			error -= dy;
+	// 		} else {
+	// 			y += y_inc;
+	// 			error += dx;
+	// 		}
+	// 	}
+	// 	return true;
+	// }
 
 	void extendRandomNode(std::shared_ptr<RRT_Node>& nearest_node,
 	                      std::shared_ptr<RRT_Node>& random_node,
@@ -230,13 +254,13 @@ private:
 				std::vector<geometry_msgs::msg::PoseStamped> path_reversed;
 				auto path_node = random_node;
 				int node_count = 0;
-				while (path_node != nullptr && path_node->get_parent() != nullptr) {
-					RCLCPP_DEBUG(this->get_logger(),
-					             "Node at (%d, %d) has parent (%d,%d)",
-					             path_node->x,
-					             path_node->y,
-					             path_node->get_parent()->x,
-					             path_node->get_parent()->y);
+				while (path_node != nullptr) {
+					// RCLCPP_DEBUG(this->get_logger(),
+					//              "Node at (%d, %d) has parent (%d,%d)",
+					//              path_node->x,
+					//              path_node->y,
+					//              path_node->get_parent()->x,
+					//              path_node->get_parent()->y);
 					node_count++;
 					geometry_msgs::msg::PoseStamped pose;
 					pose.header.frame_id = grid.header.frame_id;
