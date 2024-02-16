@@ -14,7 +14,7 @@ find_package(OpenCV REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
-find_package(visualization_msgs REQUIRED)
+
 
 include_directories(
   include
@@ -36,7 +36,7 @@ ament_target_dependencies(rrt_ros2_node rclcpp geometry_msgs nav_msgs)
 
 # rrt* 
 add_executable(rrt_star_ros2_node src/rrt_star_ros2.cpp)
-ament_target_dependencies(rrt_star_ros2_node rclcpp geometry_msgs nav_msgs visualization_msgs )
+ament_target_dependencies(rrt_star_ros2_node rclcpp geometry_msgs nav_msgs  )
 
 # Astar Ros2- Rviz Based
 add_executable(astar_opencv_node src/astar_opencv.cpp)
