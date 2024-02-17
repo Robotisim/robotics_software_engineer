@@ -239,10 +239,10 @@ private:
 		int node_count = 0;
 		path_msg.header.frame_id = grid.header.frame_id;
 		path_msg.header.stamp = grid.header.stamp;
-		RCLCPP_INFO(this->get_logger(),
-		            "Goal point has parent(%d, %d)",
-		            goal_node->get_parent()->get_x(),
-		            goal_node->get_parent()->get_y());
+		// RCLCPP_INFO(this->get_logger(),
+		//             "Goal point has parent(%d, %d)",
+		//             goal_node->get_parent()->get_x(),
+		//             goal_node->get_parent()->get_y());
 
 		for (auto const& node : path) {
 			node_count++;
