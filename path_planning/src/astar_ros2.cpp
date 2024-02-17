@@ -130,7 +130,7 @@ private:
       open_list.pop();
 
       RCLCPP_DEBUG(
-          this->get_logger(), "Checking node at (%d, %d) against goal (%d, %d)",
+          this->get_logger(), "Checking node at (%d, %d) against goal (%f, %f)",
           current_node->x, current_node->y, goal_point.x, goal_point.y);
       // Check if goal is reached
 
@@ -227,4 +227,3 @@ int main(int argc, char *argv[]) {
   rclcpp::shutdown();
   return 0;
 }
-
