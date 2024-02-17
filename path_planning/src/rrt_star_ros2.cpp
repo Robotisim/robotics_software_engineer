@@ -114,6 +114,8 @@ private:
 	// Create a vector to store the min cost
 	float min_cost = std::numeric_limits<float>::max();
 
+	bool is_goal_reached = false;
+
 	// Create a vector to store the min node
 	std::shared_ptr<RRT_STAR_Node> min_node;
 
@@ -160,24 +162,27 @@ private:
 		return std::make_shared<RRT_STAR_Node>(x, y);
 	}
 
-	std::shared_ptr<RRT_STAR_Node> bestParent(std::shared_ptr<RRT_STAR_Node> const& new_node) {
+	std::shared_ptr<RRT_STAR_Node> bestParent(std::shared_ptr<RRT_STAR_Node> const& new_node,
+	                                          nav_msgs::msg::OccupancyGrid const& grid) {
 		float best_cost = std::numeric_limits<float>::max();
 		RCLCPP_DEBUG(this->get_logger(), "Best cost: %f", best_cost);
 		std::shared_ptr<RRT_STAR_Node> best_parent;
 
 		for (auto const& node : nodes) {
 			RCLCPP_DEBUG(this->get_logger(), "Node point: (%d, %d)", node->get_x(), node->get_y());
-			float distance =
-			    std::sqrt(std::pow(node->get_x() - new_node->get_x(), 2) + std::pow(node->get_y() - new_node->get_y(), 2));
-			RCLCPP_DEBUG(this->get_logger(), "Distance: %f", distance);
+			if (obstacleFree(node->get_x(), node->get_y(), new_node->get_x(), new_node->get_y(), grid)) {
+				float distance =
+				    std::sqrt(std::pow(node->get_x() - new_node->get_x(), 2) + std::pow(node->get_y() - new_node->get_y(), 2));
+				RCLCPP_DEBUG(this->get_logger(), "Distance: %f", distance);
 
-			if (distance < radius) {
-				RCLCPP_DEBUG(this->get_logger(), "radius is %f", radius);
-				RCLCPP_DEBUG(this->get_logger(), "cost of node: %f", node->get_cost());
-				float new_cost = node->get_cost() + distance;
-				if (new_cost < best_cost) {
-					best_cost = new_cost;
-					best_parent = node;
+				if (distance < radius) {
+					RCLCPP_DEBUG(this->get_logger(), "radius is %f", radius);
+					RCLCPP_DEBUG(this->get_logger(), "cost of node: %f", node->get_cost());
+					float new_cost = node->get_cost() + distance;
+					if (new_cost < best_cost) {
+						best_cost = new_cost;
+						best_parent = node;
+					}
 				}
 			}
 		}
@@ -202,6 +207,7 @@ private:
 	bool isGoalReached(std::shared_ptr<RRT_STAR_Node> const& new_node, std::shared_ptr<RRT_STAR_Node> const& goal_node) {
 		float distance = std::sqrt(std::pow(new_node->get_x() - goal_node->get_x(), 2) +
 		                           std::pow(new_node->get_y() - goal_node->get_y(), 2));
+		is_goal_reached = distance < 2.0f;
 		return distance < 2.0f;
 	}
 
@@ -211,12 +217,19 @@ private:
 		std::shared_ptr<RRT_STAR_Node> current_node = goal_node;
 
 		while (current_node != start_node) {
+			RCLCPP_INFO(this->get_logger(),
+			            "Node point: (%d, %d) has parent(%d, %d)",
+			            current_node->get_x(),
+			            current_node->get_y(),
+			            current_node->get_parent()->get_x(),
+			            current_node->get_parent()->get_y());
 			path.push_back(current_node);
 			current_node = current_node->get_parent();
 		}
 
 		path.push_back(start_node);
 		std::reverse(path.begin(), path.end());
+		RCLCPP_INFO(this->get_logger(), "Path size: %zu", path.size());
 		return path;
 	}
 
@@ -226,6 +239,10 @@ private:
 		int node_count = 0;
 		path_msg.header.frame_id = grid.header.frame_id;
 		path_msg.header.stamp = grid.header.stamp;
+		RCLCPP_INFO(this->get_logger(),
+		            "Goal point has parent(%d, %d)",
+		            goal_node->get_parent()->get_x(),
+		            goal_node->get_parent()->get_y());
 
 		for (auto const& node : path) {
 			node_count++;
@@ -269,6 +286,7 @@ private:
 		goal_node = std::make_shared<RRT_STAR_Node>(goal_coords.first, goal_coords.second);
 
 		nodes.push_back(start_node);
+		// nodes.push_back(goal_node);
 		RCLCPP_INFO(this->get_logger(),
 		            "Starting point: (%f, %f) - Goal point: (%f, %f)",
 		            this->start_point.x,
@@ -296,7 +314,7 @@ private:
 				continue;
 			}
 
-			std::shared_ptr<RRT_STAR_Node> best_parent = bestParent(new_node);
+			std::shared_ptr<RRT_STAR_Node> best_parent = bestParent(new_node, grid);
 			new_node->set_cost(best_parent->get_cost() + std::sqrt(std::pow(new_node->get_x() - best_parent->get_x(), 2) +
 			                                                       std::pow(new_node->get_y() - best_parent->get_y(), 2)));
 
@@ -317,12 +335,55 @@ private:
 				            goal_node->get_y());
 				path = getPath(start_node, new_node);
 				publishPath(path, grid);
-				break;
+
+				// std::vector<geometry_msgs::msg::PoseStamped> path_reversed;
+				// auto path_node = new_node;
+				// RCLCPP_INFO(this->get_logger(),
+				//             "Goal point has parent(%d, %d)",
+				//             goal_node->get_parent()->get_x(),
+				//             goal_node->get_parent()->get_y());
+				// RCLCPP_INFO(this->get_logger(),
+				//             "Node point: (%d, %d) has parent(%d, %d)",
+				//             new_node->get_x(),
+				//             new_node->get_y(),
+				//             new_node->get_parent()->get_x(),
+				//             new_node->get_parent()->get_y());
+				// int node_count = 0;
+				// while (path_node != nullptr) {
+				// 	// RCLCPP_DEBUG(this->get_logger(),
+				// 	//              "Node at (%d, %d) has parent (%d,%d)",
+				// 	//              path_node->x,
+				// 	//              path_node->y,
+				// 	//              path_node->get_parent()->x,
+				// 	//              path_node->get_parent()->y);
+				// 	node_count++;
+				// 	geometry_msgs::msg::PoseStamped pose;
+				// 	pose.header.frame_id = grid.header.frame_id;
+				// 	pose.header.stamp = grid.header.stamp;
+				// 	pose.pose.position.x = path_node->get_x() - 5.0;
+				// 	pose.pose.position.y = path_node->get_y() - 5.0;
+				// 	pose.pose.position.z = 0;
+				// 	pose.pose.orientation.w = 1.0;
+				// 	path_reversed.push_back(pose);
+				// 	path_node = path_node->get_parent();
+				// }
+				// RCLCPP_INFO(this->get_logger(), "Found goal path. Total number of nodes in the path: %d", node_count);
+				// std::vector<geometry_msgs::msg::PoseStamped> path;
+				// for (auto it = path_reversed.rbegin(); it != path_reversed.rend(); ++it) {
+				// 	path.push_back(*it);
+				// }
+				// nav_msgs::msg::Path path_msg;
+				// path_msg.header.frame_id = grid.header.frame_id;
+				// path_msg.header.stamp = grid.header.stamp;
+				// path_msg.poses = path;
+				// path_publisher_->publish(path_msg);
+				// break;
 			}
 		}
 	}
 
 	bool obstacleFree(int x1, int y1, int x2, int y2, nav_msgs::msg::OccupancyGrid const& grid) {
+
 		int grid_width = grid.info.width;
 		int grid_height = grid.info.height;
 		auto const& grid_data = grid.data;
