@@ -1,15 +1,15 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/image.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
-#include "custom_interfaces/msg/camera_lidar_msg.hpp"  // replace with your package and message name
+#include "custom_interfaces/msg/camera_lidar.hpp"
 
 class CameraLidarPublisher : public rclcpp::Node {
 public:
     CameraLidarPublisher() : Node("camera_lidar_publisher") {
-        // Initialize publisher
-        publisher_ = this->create_publisher<custom_interfaces::msg::CameraLidarMsg>("camera_lidar_topic", 10);
 
-        // Initialize subscribers
+        publisher_ = this->create_publisher<custom_interfaces::msg::CameraLidar>("camera_lidar_topic", 10);
+
+
         camera_subscriber_ = this->create_subscription<sensor_msgs::msg::Image>(
             "camera_topic", 10, std::bind(&CameraLidarPublisher::camera_callback, this, std::placeholders::_1));
 
@@ -29,13 +29,13 @@ private:
     }
 
     void publish_combined_message() {
-        auto combined_msg = custom_interfaces::msg::CameraLidarMsg();
+        auto combined_msg = custom_interfaces::msg::CameraLidar();
         combined_msg.camera_data = camera_data_;
         combined_msg.lidar_data = lidar_data_;
         publisher_->publish(combined_msg);
     }
 
-    rclcpp::Publisher<custom_interfaces::msg::CameraLidarMsg>::SharedPtr publisher_;
+    rclcpp::Publisher<custom_interfaces::msg::CameraLidar>::SharedPtr publisher_;
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr camera_subscriber_;
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr lidar_subscriber_;
     sensor_msgs::msg::Image camera_data_;

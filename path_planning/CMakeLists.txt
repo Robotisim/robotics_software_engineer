@@ -43,7 +43,7 @@ add_executable(astar_opencv_node src/astar_opencv.cpp)
 target_link_libraries(astar_opencv_node ${OpenCV_LIBRARIES})
 ament_target_dependencies(astar_opencv_node rclcpp)
 
-install(DIRECTORY
+install(DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME}
 )
 

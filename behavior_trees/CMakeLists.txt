@@ -38,7 +38,7 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME})
 
 
-  install(DIRECTORY trees
+  install(DIRECTORY trees launch
   # launch worlds models map config
     DESTINATION share/${PROJECT_NAME}/
   )

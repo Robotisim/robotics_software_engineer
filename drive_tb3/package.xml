@@ -11,6 +11,9 @@
 
   <depend>rclpy</depend>
   <depend>nav2_msgs</depend>
+  <depend>turtlebot3_gazebo</depend>
+  <depend>turtlebot3_navigation2</depend>
+
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
