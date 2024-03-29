@@ -1,4 +1,6 @@
-# Assignments for Module #1 : C++ from Robotics Prespective
+# These assignment-Tasks are not yet Finilized
+
+#### Assignments for Module #1 : C++ from Robotics Prespective
 - Create all files in *module_1_assignment* package
 ### Assignment 1: Simulating Sensors with Hardcoded Values
 - **Objective**: Learn how to simulate sensor data using hardcoded values in C++.

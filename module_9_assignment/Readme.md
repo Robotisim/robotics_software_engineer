@@ -1,4 +1,6 @@
-# Assignments for Module #9 : Custom Interfaces
+# These assignment-Tasks are not yet Finilized
+
+### Assignments for Module #9 : Custom Interfaces
 - Create all files in *module_9_assignment* package
 ### Assignment 1: Environmental Awareness and Adaptive Navigation
 

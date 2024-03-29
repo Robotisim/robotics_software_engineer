@@ -1,4 +1,7 @@
-# Assignments for Module #10 : Point Clouds
+# These assignment-Tasks are not yet Finilized
+
+
+### Assignments for Module #10 : Point Clouds
 - Create all files in *module_10_assignment* package
 ### Assignment 1: Efficient Point Cloud Segmentation and Analysis Using Octrees
 **Task**:

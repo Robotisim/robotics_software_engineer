@@ -2,14 +2,20 @@
 - Create all files in *module_3_assignment* package
 
 
-### Assignment 1: Introduction to Rviz
+### Assignment 1: Robotic Arm Creation using TF
 - **Tasks**:
-Create a custom transform tree for a Robotics arm of 3 DOF without body and visualize it in rviz
-### Assignment 2: Getting Started with Gazebo
+Create a custom transform tree for a
+    - Robotics arm of 3 DOF without body ( only transforms)
+    - visualize it in rviz + utilize joint state publisher GUI to see transforms
+    - You should not have any visualize tag filled yet.
+### Assignment 2: Joints Understanding
 - **Tasks**:
-Add joints to the same Robotic Arm that you created earlier .Joint type should be revolute with limits.
-### Assignment 3: Building Your Custom Robot with URDF
+Add joints to the same Robotic Arm that you created earlier
+    - Finger joints with prismatic joint type
+    - Have base joint as continous
+    - All other joints should be Revolute
+    - Add visualize tag to your robot urdf and create body mostly using cylinders
+### Assignment 3: Building Mobile Manupilator
 - **Tasks**:
-Complete your Robot body with a simple shapes design focusing on incorporating various joints (revolute, fixed) and links.
-Visualize your robot in Rviz to ensure that all parts are connected correctly and the robot appears as intended.
-Prepare your robot for simulation in Gazebo, ensuring it can be loaded into the environment.
+Put your robotic arm on top of different drive robot
+    - Connect using base_link of diff bot.

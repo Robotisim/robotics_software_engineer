@@ -1,4 +1,6 @@
-# Assignments for Module #8 : Behaviour Trees
+# These assignment-Tasks are not yet Finilized
+
+## Assignments for Module #8 : Behaviour Trees
 - Create all files in *module_8_assignment* package
 
 ### Assignment 1: Behavior Tree for Object-Detection-Triggered Navigation

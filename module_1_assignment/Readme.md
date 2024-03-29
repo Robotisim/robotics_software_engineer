@@ -10,14 +10,30 @@ Print these values to the console with appropriate descriptions (e.g., "Temperat
 ### Assignment 2: Introduction to Object-Oriented Programming (OOP)
 - **Objective**: Introduce basic OOP concepts using C++ within a robotics context.
 - **Tasks**:
-Define a Robot class with attributes like name, speed, and methods for moving (moveForward, moveBackward) and stopping.
+Define a Robot class with attributes
+    - name
+    - speed
+    - Physical ( weight , size , number of sensors )
+Methods for moving
+    - moveForward
+    - moveBackward
+    - stopping.
 Instantiate a Robot object and simulate actions by invoking its methods.
+Utilize namespaces for defining different robots.
 Output each action to the console to show the robot's behavior.
 - **Learning Outcome**: Grasp OOP principles and their application in robotics software development.
+
 ### Assignment 3: Creating Custom Libraries for Robotics Components
 - **Objective**: Learn how to create and use custom C++ libraries for reusable robotics components.
 - **Tasks**:
-Design a simple sensor library that includes classes for different types of sensors (e.g., TemperatureSensor, DistanceSensor).
+Design a simple sensor library that includes classes for different types of sensors
+    - TemperatureSensor
+    - DistanceSensor
 Use these classes in a main program to simulate getting readings from sensors.
 Ensure proper documentation and use CMakeLists for building the project.
+
+- Create Single Class Template to be utilized for multiple Sensors of different types
+    - Double data
+    - String Data
+    - Character data
 - **Learning Outcome**: Understand how to organize code into reusable libraries and compile them using CMake.

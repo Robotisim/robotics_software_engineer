@@ -1,17 +1,22 @@
-# Assignments for Module #4 : ROS2 3D simulation with Turtlebot3
+# Assignments for Module #4 : Robot Sensing
 - Create all files in *module_4_assignment* package
 
-
-
-
-### Assignment 1: Energy-Efficient Path Planning Node
+### Assignment 1: Wall Following Behaviour
 - **Tasks**:
-Write a ROS2 node that plans the TurtleBot3's path to a given goal while minimizing energy consumption based on time.
-The path planning algorithm should consider both the distance to the goal and the robot's energy expenditure, which could be simulated based on speed, acceleration, and distance traveled.
+Create a maze in gazebo to perform wall following
+    - Detect Wall on right with Lidar Sensor
+    - Should create an envionrment of sqaure shape
+    - Robot will keep the structure on its right
 
-### Assignment 2: Multi-Robot Coordination in a Shared Environment
+### Assignment 2: Calculate Robot Speed
 - **Tasks**:
-Develop a scenario in Gazebo where multiple TurtleBot3 robots must perform a task cooperatively (e.g. forming shapes ).
-Write ROS2 nodes that enable each robot to communicate and coordinate with each other to achieve the common goal without collisions.
+Utilize Turltebo3 IMU sensor to calculate robot
+    - Velocity
+    - Acceleration
 
-
+### Assignment 2: Ball Following Robot
+- **Tasks**:
+Make Turtlebot3 Follow a ball
+    - Utilize Camera sensor data
+    - Segment Ball
+    - When the ball moves robot should also move towards it
