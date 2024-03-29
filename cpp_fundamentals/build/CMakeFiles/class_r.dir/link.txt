@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/class_r.dir/src/class_robot.cpp.o -o class_r 

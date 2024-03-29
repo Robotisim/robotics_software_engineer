@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+  <robot name="dolly">
+
+
+
+  <link name="base">
+    <visual>
+      <geometry>
+          <box size="0.75 0.4 0.1"/>
+      </geometry>
+      <material name="gray">
+        <color rgba=".2 .2 .2 1" />
+      </material>
+    </visual>
+
+    <inertial>
+        <mass value="1" />
+        <inertia ixx="0.01" ixy="0.0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+    </inertial>
+
+    <collision>
+      <geometry>
+          <box size="0.75 0.4 0.1"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <link name="wheel_right_link">
+    <inertial>
+            <mass value="2" />
+            <inertia ixx="0.01" ixy="0.0" ixz="0"
+            iyy="0.01" iyz="0" izz="0.01" />
+    </inertial>
+
+    <visual>
+      <geometry>
+          <cylinder radius="0.15" length="0.1"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+
+      <geometry>
+          <cylinder radius="0.15" length="0.1"/>
+      </geometry>
+      <contact_coefficients mu="100.5" kp="1e+13" kd="1.0"/>
+    </collision>
+  </link>
+
+  <joint name="wheel_right_joint" type="continuous">
+    <origin xyz="0.2 0.27 0.0" rpy="1.57 0.0 0.0"/>
+    <parent link="base"/>
+    <child link="wheel_right_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+
+
+
+  <link name="wheel_left_link">
+    <inertial>
+            <mass value="2" />
+            <inertia ixx="0.01" ixy="0.0" ixz="0"
+            iyy="0.01" iyz="0" izz="0.01" />
+    </inertial>
+
+    <visual>
+
+      <geometry>
+          <cylinder radius="0.15" length="0.1"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+          <cylinder radius="0.15" length="0.1"/>
+      </geometry>
+      <contact_coefficients mu="100.5" kp="1e+13" kd="1.0"/>
+    </collision>
+  </link>
+
+  <joint name="wheel_left_joint" type="continuous">
+    <origin xyz="0.2 -0.27 0.0" rpy="1.57 0.0 0.0"/>
+    <parent link="base"/>
+    <child link="wheel_left_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+
+  </joint>
+
+
+
+  <link name="caster">
+    <inertial>
+            <mass value="1" />
+            <inertia ixx="0.01" ixy="0.0" ixz="0"
+            iyy="0.01" iyz="0" izz="0.01" />
+    </inertial>
+
+    <visual>
+
+      <geometry>
+        <sphere radius=".04" />
+      </geometry>
+      <material name="white" />
+    </visual>
+
+    <collision>
+      <origin/>
+      <geometry>
+        <sphere radius=".04" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="caster_joint" type="continuous">
+    <origin xyz="-0.3 0.0 -0.08" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1" />
+    <parent link="base"/>
+    <child link="caster"/>
+  </joint>
+
+  <link name="camera">
+    <inertial>
+            <mass value="0.1" />
+            <inertia ixx="0.01" ixy="0.0" ixz="0"
+            iyy="0.01" iyz="0" izz="0.01" />
+    </inertial>
+
+    <visual>
+
+      <geometry>
+        <box size="0.1 0.1 0.05"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+          <box size="0.1 0.1 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <origin xyz="-0.35 0 0.01" rpy="0 0.0 3.14"/>
+    <parent link="base"/>
+    <child link="camera"/>
+    <axis xyz="0.0 0.0 1.0"/>
+
+  </joint>
+
+  <link name="lidar">
+    <inertial>
+            <mass value="0.5" />
+            <inertia ixx="0.01" ixy="0.0" ixz="0"
+            iyy="0.01" iyz="0" izz="0.01" />
+    </inertial>
+
+    <visual>
+
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+          <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="lidar_joint" type="fixed">
+    <origin xyz="-0.285 0 0.075" rpy="0 0.0 1.57"/>
+    <parent link="base"/>
+    <child link="lidar"/>
+    <axis xyz="0.0 0.0 1.0"/>
+
+  </joint>
+
+<!-- Custom Velocity Controller -->
+
+<ros2_control name="GazeboSystem" type="system">
+  <hardware>
+    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </hardware>
+
+  <joint name="wheel_right_joint">
+
+    <command_interface name="velocity">
+      <param name="min">-5</param>
+      <param name="max">5</param>
+    </command_interface>
+
+    <state_interface name="position">
+      <param name="initial_value">1.0</param>
+    </state_interface>
+
+    <state_interface name="velocity"/>
+
+  </joint>
+
+
+    <joint name="wheel_left_joint">
+
+    <command_interface name="velocity">
+      <param name="min">-5</param>
+      <param name="max">5</param>
+    </command_interface>
+
+    <state_interface name="position">
+      <param name="initial_value">1.0</param>
+    </state_interface>
+
+    <state_interface name="velocity"/>
+
+  </joint>
+
+
+</ros2_control>
+
+
+
+<gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
+      <parameters>/home/luqman/robotisim_ws/src/control_systems/config/diffbot_controller.yaml</parameters>
+    </plugin>
+</gazebo>
+
+
+
+</robot>

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/pointer_r.dir/src/pointers_robot_location.cpp.o -o pointer_r 
