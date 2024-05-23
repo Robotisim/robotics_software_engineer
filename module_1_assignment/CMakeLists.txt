@@ -12,7 +12,9 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 # add executable
-add_executable(rbt_snsr_hrdcore robot_sensor_harcode.cpp)
+add_executable(robot_sensor src/build/robot_sensor_hardcore.cpp)
+add_executable(robot1 src/build/robot_intro.cpp src/build/robot1_intro.cpp)
+
 
 
 if(BUILD_TESTING)
