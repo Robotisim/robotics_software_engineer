@@ -1,0 +1,4 @@
+source;share/module_2_assignment/local_setup.bash
+source;share/module_2_assignment/local_setup.dsv
+source;share/module_2_assignment/local_setup.sh
+source;share/module_2_assignment/local_setup.zsh

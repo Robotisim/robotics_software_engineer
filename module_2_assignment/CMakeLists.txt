@@ -27,8 +27,12 @@ ament_target_dependencies(back_forth rclcpp std_msgs geometry_msgs nav_msgs tf2_
 add_executable(spiral_turtle src/spiral_turtle.cpp)
 ament_target_dependencies(spiral_turtle rclcpp std_msgs geometry_msgs)
 
+add_executable(turtle_motion src/turtle_log_spiral.cpp)
+ament_target_dependencies(turtle_motion rclcpp std_msgs geometry_msgs)
+
 install(TARGETS
-  back_forth
+  # back_forth
+  turtle_motion
   spiral_turtle
   DESTINATION lib/${PROJECT_NAME})
 
