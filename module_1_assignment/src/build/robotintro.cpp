@@ -1,5 +1,6 @@
 #include "robotintro.h"
 
+
 RobotInfo::RobotInfo(string name, int speed, int weight, int size, int number_of_sensors) {
   this->name = name;
   this->speed = speed;
