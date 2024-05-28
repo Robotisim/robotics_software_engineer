@@ -12,8 +12,8 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 # add executable
-add_executable(robot_sensor src/build/robot_sensor_hardcore.cpp)
-add_executable(robot1 src/build/robot_intro.cpp src/build/robot1_intro.cpp)
+add_executable(robot_sensor src/robot_sensor_hardcore.cpp)
+add_executable(robot1 src/robot_intro.cpp src/robotintro.cpp)
 
 
 
