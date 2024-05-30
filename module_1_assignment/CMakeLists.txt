@@ -11,6 +11,12 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# add executable
+add_executable(robot_sensor src/robot_sensor_hardcore.cpp)
+add_executable(robot1 src/robot_intro.cpp src/robotintro.cpp)
+
+
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

@@ -1,0 +1,15 @@
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/ament_index/resource_index/package_run_dependencies/module_10_assignment
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/ament_index/resource_index/parent_prefix_path/module_10_assignment
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/environment/ament_prefix_path.sh
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/environment/ament_prefix_path.dsv
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/environment/path.sh
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/environment/path.dsv
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/local_setup.bash
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/local_setup.sh
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/local_setup.zsh
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/local_setup.dsv
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/package.dsv
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/ament_index/resource_index/packages/module_10_assignment
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/cmake/module_10_assignmentConfig.cmake
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/cmake/module_10_assignmentConfig-version.cmake
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_10_assignment/share/module_10_assignment/package.xml
