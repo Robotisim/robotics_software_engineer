@@ -20,3 +20,9 @@ Make Turtlebot3 Follow a ball
     - Utilize Camera sensor data
     - Segment Ball
     - When the ball moves robot should also move towards it
+
+### Assignment 4: Debug the package
+- **Tasks**:
+You have to find out errors in package `robot_sensing_debug`
+    - Document all errors in running Line following launch file
+    - Document all errors in running Maze Solving launch file
