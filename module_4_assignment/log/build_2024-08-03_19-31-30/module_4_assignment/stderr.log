@@ -1,0 +1,21 @@
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_uninstall_target-extras.cmake:40 (add_custom_target):
+  add_custom_target called with invalid target name
+  "module_4_assignment/maze_solving_uninstall".  Target names may not contain
+  a slash.  Use ADD_CUSTOM_COMMAND to generate files.
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+  /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:9 (find_package)
+
+[0m
+[0m** WARNING ** io features related to pcap will be disabled[0m
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+  ament_package_xml() package name 'module_4_assignment' in '/package.xml'
+  does not match current PROJECT_NAME 'module_4_assignment/maze_solving'.
+  You must call project() with the same package name before.
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+  CMakeLists.txt:57 (ament_lint_auto_find_test_dependencies)
+
+[0m

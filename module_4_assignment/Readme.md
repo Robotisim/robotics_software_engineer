@@ -17,7 +17,9 @@ The code is inside the folder name maze_solving.
 file of the model - square_room
 square_room folder is inside the model folder
 worlds - squre_world.world
-
+command I used to make launch the file is 
+"ros2 launch maze_solving lidar_squar_roomsolving.launch.py"
 
 For Assigment 2 where we need to create a brainstroming session for the line following robot.
 Name of the file of the document is "linefollowingrobotbrainstorming.pdf"
+

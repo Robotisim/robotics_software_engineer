@@ -1,0 +1,32 @@
+[0.012s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/build/maze_solving': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving -DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/install/maze_solving
+[0.019s] [33mCMake Warning (dev) in CMakeLists.txt:
+[0.019s]   No project() command is present.  The top-level CMakeLists.txt file must
+[0.019s]   contain a literal, direct call to the project() command.  Add a line of
+[0.019s]   code such as
+[0.020s] 
+[0.020s]     project(ProjectName)
+[0.020s] 
+[0.020s]   near the top of the file, but after cmake_minimum_required().
+[0.020s] 
+[0.020s]   CMake is pretending there is a "project(Project)" command on the first
+[0.020s]   line.
+[0.020s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.020s] [0m
+[0.070s] -- The C compiler identification is GNU 11.4.0
+[0.128s] -- The CXX compiler identification is GNU 11.4.0
+[0.137s] -- Detecting C compiler ABI info
+[0.213s] -- Detecting C compiler ABI info - done
+[0.220s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.220s] -- Detecting C compile features
+[0.220s] -- Detecting C compile features - done
+[0.223s] -- Detecting CXX compiler ABI info
+[0.308s] -- Detecting CXX compiler ABI info - done
+[0.315s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.316s] -- Detecting CXX compile features
+[0.316s] -- Detecting CXX compile features - done
+[0.317s] -- Configuring done
+[0.317s] -- Generating done
+[0.318s] -- Build files have been written to: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/build/maze_solving
+[0.321s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/build/maze_solving' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving -DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/install/maze_solving
+[0.323s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/build/maze_solving': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/build/maze_solving -- -j16 -l16
+[0.366s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/build/maze_solving' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/build/maze_solving -- -j16 -l16
