@@ -6,12 +6,13 @@ Complete software based curriculum is designed to take you through the foundatio
 ### Running these Projects
 To run modules, you can check out our detailed [Wiki](https://github.com/Robotisim/robotics_software_engineer/wiki)
 ### Information
-- Go through Curriculum -> [here](https://github.com/Robotisim/robotics_software_engineer/blob/main/Curriculum.md)
+- Go through Curriculum -> [here](https://robotisim.com/learning-path-rse/)
 - **Source Code will be open source**
     - If you are interested in learning with
         - Detailed explanation
         - Assignments - Quizes
         - Bi-Weekly Live Meetings
+
     Check out -> [Robotics Software Engineer Learning Path](https://www.robotisim.com/)
 
 ### Contact Us
