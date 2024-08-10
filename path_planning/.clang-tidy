@@ -1,0 +1,15 @@
+
+FormatStyle: "file"
+
+Checks: "*,
+  -altera-*,
+  -fuchsia-*,
+  -llvmlibc-*,
+  -llvm-*,
+  -hicpp-*,
+  -bugprone-easily-swappable-parameters,
+  -modernize-pass-by-value,
+  -misc-non-private-member-variables-in-classes,
+  -cppcoreguidelines-non-private-member-variables-in-classes,
+  -modernize-use-trailing-return-type,
+  -readability-identifier-length"
