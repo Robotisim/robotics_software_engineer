@@ -1,0 +1,44 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 30.0
+    sensor_timeout: 0.1
+    two_d_mode: true
+    transform_time_offset: 0.0
+    transform_timeout: 0.0
+    print_diagnostics: true
+    debug: false
+    # debug_out_file: /path/to/debug/file.txt
+    publish_acceleration: false
+    map_frame: map              # Defaults to "map" if unspecified
+    odom_frame: odom            # Defaults to "odom" if unspecified
+    base_link_frame: base_link  # Defaults to "base_link" if unspecified
+    world_frame: odom           # Defaults to the value of odom_frame if unspecified
+    use_control: false
+    stamped_control: false
+    control_timeout: 0.2
+    smooth_lagged_data: false
+    history_length: 10.0
+
+    odom0: /odom
+    odom0_config: [true, true, false,  # Position XYZ
+                    false, false, true,  # Orientation XYZ
+                    false, false, false,  # Linear velocity XYZ
+                    false, false, false,   # Angular velocity XYZ
+                    false, false, false]  # Linear acceleration XYZ
+    odom0_queue_size: 10
+    odom0_nodelay: true
+    odom0_differential: false
+    odom0_relative: false
+
+    imu0: /imu
+    imu0_config: [false, false, false,
+                  true, true, true,
+                  false, false, false,
+                  true, true, true,
+                  true, true, true]
+    imu0_queue_size: 10
+    imu0_nodelay: false
+    imu0_differential: false
+    imu0_relative: false
+    imu0_remove_gravitational_acceleration: true
+    use_odometry_yaw: false

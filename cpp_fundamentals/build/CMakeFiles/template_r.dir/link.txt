@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/template_r.dir/src/template_robot.cpp.o -o template_r 

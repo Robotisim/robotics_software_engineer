@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/function_sr.dir/src/functions_sensor_reading.cpp.o -o function_sr 
