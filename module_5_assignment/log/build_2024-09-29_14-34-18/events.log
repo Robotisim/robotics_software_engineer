@@ -1,0 +1,413 @@
+[0.000000] (-) TimerEvent: {}
+[0.000148] (module_5_assignment) JobQueued: {'identifier': 'module_5_assignment', 'dependencies': OrderedDict()}
+[0.000172] (module_5_assignment) JobStarted: {'identifier': 'module_5_assignment'}
+[0.009078] (module_5_assignment) JobProgress: {'identifier': 'module_5_assignment', 'progress': 'cmake'}
+[0.009409] (module_5_assignment) Command: {'cmd': ['/usr/bin/cmake', '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment', '-DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment'], 'cwd': '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'kushal16'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/kushal16/robotisim_ws/install/ros2_kitti_publishers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kushal16'), ('OLDPWD', '/home/kushal16/rse_ws1/robotics_software_engineer'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1492'), ('SYSTEMD_EXEC_PID', '1669'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7045'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/kushal16/rse_ws1/robotics_software_engineer/install:/home/kushal16/rse_ws1/install:/home/kushal16/robotisim_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kushal16'), ('JOURNAL_STREAM', '8:7661'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kushal16'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kushal16-ros2Ubuntu:@/tmp/.ICE-unix/1638,unix/kushal16-ros2Ubuntu:/tmp/.ICE-unix/1638'), ('INVOCATION_ID', '7ab931db8b20418994706dc075a9691d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Y7HWU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/kushal16/rse_ws1/install/robot_sensing_debug:/home/kushal16/rse_ws1/install/module_8_assignment:/home/kushal16/rse_ws1/install/module_7_assignment:/home/kushal16/rse_ws1/install/module_6_assignment:/home/kushal16/rse_ws1/install/module_5_assignment:/home/kushal16/rse_ws1/install/module_4_assignment:/home/kushal16/rse_ws1/install/module_3_assignment:/home/kushal16/rse_ws1/install/module_2_assignment:/home/kushal16/rse_ws1/install/module_1_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/robot_sensing_debug:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_8_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_7_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_6_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_5_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_4_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_3_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_2_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_1_assignment:/home/kushal16/robotisim_ws/install/ros2_kitti_publishers:/home/kushal16/robotisim_ws/install/maze_solving:/home/kushal16/robotisim_ws/install/drive_mobile_robot:/home/kushal16/robotisim_ws/install/custom_robots:/home/kushal16/robotisim_ws/install/control_systems:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:7b7ae285-f0df-42be-97a4-abc72b3ca0b3'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/kushal16/robotisim_ws/install/pykitti/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/kushal16/rse_ws1/install/robot_sensing_debug:/home/kushal16/rse_ws1/install/module_8_assignment:/home/kushal16/rse_ws1/install/module_7_assignment:/home/kushal16/rse_ws1/install/module_6_assignment:/home/kushal16/rse_ws1/install/module_5_assignment:/home/kushal16/rse_ws1/install/module_4_assignment:/home/kushal16/rse_ws1/install/module_3_assignment:/home/kushal16/rse_ws1/install/module_2_assignment:/home/kushal16/rse_ws1/install/module_1_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/robot_sensing_debug:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_8_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_7_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_6_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_5_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_4_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_3_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_2_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_1_assignment:/home/kushal16/robotisim_ws/install/ros2_kitti_publishers:/home/kushal16/robotisim_ws/install/maze_solving:/home/kushal16/robotisim_ws/install/drive_mobile_robot:/home/kushal16/robotisim_ws/install/custom_robots:/home/kushal16/robotisim_ws/install/control_systems:/opt/ros/humble')]), 'shell': False}
+[0.099245] (-) TimerEvent: {}
+[0.101048] (module_5_assignment) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.173403] (module_5_assignment) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.183225] (module_5_assignment) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199437] (-) TimerEvent: {}
+[0.260146] (module_5_assignment) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.267320] (module_5_assignment) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.267646] (module_5_assignment) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.268059] (module_5_assignment) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.271009] (module_5_assignment) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299594] (-) TimerEvent: {}
+[0.361390] (module_5_assignment) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.368196] (module_5_assignment) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.368453] (module_5_assignment) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.368925] (module_5_assignment) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.389146] (module_5_assignment) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399723] (-) TimerEvent: {}
+[0.500093] (-) TimerEvent: {}
+[0.548066] (module_5_assignment) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.600243] (-) TimerEvent: {}
+[0.677090] (module_5_assignment) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.700416] (-) TimerEvent: {}
+[0.750965] (module_5_assignment) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.760845] (module_5_assignment) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.774610] (module_5_assignment) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.796309] (module_5_assignment) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.800524] (-) TimerEvent: {}
+[0.825061] (module_5_assignment) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.900656] (-) TimerEvent: {}
+[0.919846] (module_5_assignment) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.925927] (module_5_assignment) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.000820] (-) TimerEvent: {}
+[1.083511] (module_5_assignment) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.100953] (-) TimerEvent: {}
+[1.117776] (module_5_assignment) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.174688] (module_5_assignment) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.194296] (module_5_assignment) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.201094] (-) TimerEvent: {}
+[1.287388] (module_5_assignment) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.287846] (module_5_assignment) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.301235] (-) TimerEvent: {}
+[1.374363] (module_5_assignment) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.375514] (module_5_assignment) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.401403] (-) TimerEvent: {}
+[1.501773] (-) TimerEvent: {}
+[1.540983] (module_5_assignment) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.6 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[1.601912] (-) TimerEvent: {}
+[1.702263] (-) TimerEvent: {}
+[1.802913] (-) TimerEvent: {}
+[1.903260] (-) TimerEvent: {}
+[1.934952] (module_5_assignment) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[2.003423] (-) TimerEvent: {}
+[2.012679] (module_5_assignment) StdoutLine: {'line': b'-- Found angles: 1.15.0 (/opt/ros/humble/share/angles/cmake)\n'}
+[2.017844] (module_5_assignment) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[2.103692] (-) TimerEvent: {}
+[2.204351] (-) TimerEvent: {}
+[2.216287] (module_5_assignment) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[2.236975] (module_5_assignment) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[2.247893] (module_5_assignment) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.304631] (-) TimerEvent: {}
+[2.341766] (module_5_assignment) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.342346] (module_5_assignment) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/../../extern/eigen;/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/include\n'}
+[2.342601] (module_5_assignment) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.344348] (module_5_assignment) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.346590] (module_5_assignment) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.348128] (module_5_assignment) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.354397] (module_5_assignment) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.354568] (module_5_assignment) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.355988] (module_5_assignment) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.358238] (module_5_assignment) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.377795] (module_5_assignment) StdoutLine: {'line': b'-- Generating done\n'}
+[2.379890] (module_5_assignment) StdoutLine: {'line': b'-- Build files have been written to: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment\n'}
+[2.391054] (module_5_assignment) CommandEnded: {'returncode': 0}
+[2.391984] (module_5_assignment) JobProgress: {'identifier': 'module_5_assignment', 'progress': 'build'}
+[2.392775] (module_5_assignment) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment', '--', '-j16', '-l16'], 'cwd': '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'kushal16'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/kushal16/robotisim_ws/install/ros2_kitti_publishers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kushal16'), ('OLDPWD', '/home/kushal16/rse_ws1/robotics_software_engineer'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1492'), ('SYSTEMD_EXEC_PID', '1669'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7045'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/kushal16/rse_ws1/robotics_software_engineer/install:/home/kushal16/rse_ws1/install:/home/kushal16/robotisim_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kushal16'), ('JOURNAL_STREAM', '8:7661'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kushal16'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kushal16-ros2Ubuntu:@/tmp/.ICE-unix/1638,unix/kushal16-ros2Ubuntu:/tmp/.ICE-unix/1638'), ('INVOCATION_ID', '7ab931db8b20418994706dc075a9691d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Y7HWU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/kushal16/rse_ws1/install/robot_sensing_debug:/home/kushal16/rse_ws1/install/module_8_assignment:/home/kushal16/rse_ws1/install/module_7_assignment:/home/kushal16/rse_ws1/install/module_6_assignment:/home/kushal16/rse_ws1/install/module_5_assignment:/home/kushal16/rse_ws1/install/module_4_assignment:/home/kushal16/rse_ws1/install/module_3_assignment:/home/kushal16/rse_ws1/install/module_2_assignment:/home/kushal16/rse_ws1/install/module_1_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/robot_sensing_debug:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_8_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_7_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_6_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_5_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_4_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_3_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_2_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_1_assignment:/home/kushal16/robotisim_ws/install/ros2_kitti_publishers:/home/kushal16/robotisim_ws/install/maze_solving:/home/kushal16/robotisim_ws/install/drive_mobile_robot:/home/kushal16/robotisim_ws/install/custom_robots:/home/kushal16/robotisim_ws/install/control_systems:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:7b7ae285-f0df-42be-97a4-abc72b3ca0b3'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/kushal16/robotisim_ws/install/pykitti/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/kushal16/rse_ws1/install/robot_sensing_debug:/home/kushal16/rse_ws1/install/module_8_assignment:/home/kushal16/rse_ws1/install/module_7_assignment:/home/kushal16/rse_ws1/install/module_6_assignment:/home/kushal16/rse_ws1/install/module_5_assignment:/home/kushal16/rse_ws1/install/module_4_assignment:/home/kushal16/rse_ws1/install/module_3_assignment:/home/kushal16/rse_ws1/install/module_2_assignment:/home/kushal16/rse_ws1/install/module_1_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/robot_sensing_debug:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_8_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_7_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_6_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_5_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_4_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_3_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_2_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_1_assignment:/home/kushal16/robotisim_ws/install/ros2_kitti_publishers:/home/kushal16/robotisim_ws/install/maze_solving:/home/kushal16/robotisim_ws/install/drive_mobile_robot:/home/kushal16/robotisim_ws/install/custom_robots:/home/kushal16/robotisim_ws/install/control_systems:/opt/ros/humble')]), 'shell': False}
+[2.404727] (-) TimerEvent: {}
+[2.453550] (module_5_assignment) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/lineFollowing.dir/src/line_following_with_camera.cpp.o\x1b[0m\n'}
+[2.453799] (module_5_assignment) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o\x1b[0m\n'}
+[2.504879] (-) TimerEvent: {}
+[2.605240] (-) TimerEvent: {}
+[2.705690] (-) TimerEvent: {}
+[2.806142] (-) TimerEvent: {}
+[2.906533] (-) TimerEvent: {}
+[3.006942] (-) TimerEvent: {}
+[3.107346] (-) TimerEvent: {}
+[3.207766] (-) TimerEvent: {}
+[3.308201] (-) TimerEvent: {}
+[3.408628] (-) TimerEvent: {}
+[3.509030] (-) TimerEvent: {}
+[3.609433] (-) TimerEvent: {}
+[3.709826] (-) TimerEvent: {}
+[3.810246] (-) TimerEvent: {}
+[3.910691] (-) TimerEvent: {}
+[4.011086] (-) TimerEvent: {}
+[4.111484] (-) TimerEvent: {}
+[4.211881] (-) TimerEvent: {}
+[4.312558] (-) TimerEvent: {}
+[4.413131] (-) TimerEvent: {}
+[4.513904] (-) TimerEvent: {}
+[4.614312] (-) TimerEvent: {}
+[4.715323] (-) TimerEvent: {}
+[4.816229] (-) TimerEvent: {}
+[4.916692] (-) TimerEvent: {}
+[5.017584] (-) TimerEvent: {}
+[5.118174] (-) TimerEvent: {}
+[5.218859] (-) TimerEvent: {}
+[5.319510] (-) TimerEvent: {}
+[5.420144] (-) TimerEvent: {}
+[5.520815] (-) TimerEvent: {}
+[5.621212] (-) TimerEvent: {}
+[5.721628] (-) TimerEvent: {}
+[5.821992] (-) TimerEvent: {}
+[5.922331] (-) TimerEvent: {}
+[6.022711] (-) TimerEvent: {}
+[6.123088] (-) TimerEvent: {}
+[6.223480] (-) TimerEvent: {}
+[6.323877] (-) TimerEvent: {}
+[6.424252] (-) TimerEvent: {}
+[6.524678] (-) TimerEvent: {}
+[6.625085] (-) TimerEvent: {}
+[6.725509] (-) TimerEvent: {}
+[6.825949] (-) TimerEvent: {}
+[6.926397] (-) TimerEvent: {}
+[7.027039] (-) TimerEvent: {}
+[7.127708] (-) TimerEvent: {}
+[7.228333] (-) TimerEvent: {}
+[7.328853] (-) TimerEvent: {}
+[7.429652] (-) TimerEvent: {}
+[7.530270] (-) TimerEvent: {}
+[7.630681] (-) TimerEvent: {}
+[7.731232] (-) TimerEvent: {}
+[7.831585] (-) TimerEvent: {}
+[7.931932] (-) TimerEvent: {}
+[8.032325] (-) TimerEvent: {}
+[8.132725] (-) TimerEvent: {}
+[8.233095] (-) TimerEvent: {}
+[8.333478] (-) TimerEvent: {}
+[8.433851] (-) TimerEvent: {}
+[8.534231] (-) TimerEvent: {}
+[8.634636] (-) TimerEvent: {}
+[8.735007] (-) TimerEvent: {}
+[8.835420] (-) TimerEvent: {}
+[8.935782] (-) TimerEvent: {}
+[9.036152] (-) TimerEvent: {}
+[9.136542] (-) TimerEvent: {}
+[9.236922] (-) TimerEvent: {}
+[9.337300] (-) TimerEvent: {}
+[9.437704] (-) TimerEvent: {}
+[9.538079] (-) TimerEvent: {}
+[9.638481] (-) TimerEvent: {}
+[9.738861] (-) TimerEvent: {}
+[9.839243] (-) TimerEvent: {}
+[9.939638] (-) TimerEvent: {}
+[10.040209] (-) TimerEvent: {}
+[10.140715] (-) TimerEvent: {}
+[10.241228] (-) TimerEvent: {}
+[10.341684] (-) TimerEvent: {}
+[10.442134] (-) TimerEvent: {}
+[10.520518] (module_5_assignment) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable lineFollowing\x1b[0m\n'}
+[10.542292] (-) TimerEvent: {}
+[10.642790] (-) TimerEvent: {}
+[10.743239] (-) TimerEvent: {}
+[10.843773] (-) TimerEvent: {}
+[10.944261] (-) TimerEvent: {}
+[11.044707] (-) TimerEvent: {}
+[11.145101] (-) TimerEvent: {}
+[11.245489] (-) TimerEvent: {}
+[11.345909] (-) TimerEvent: {}
+[11.421699] (module_5_assignment) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX static library liblqr_lib.a\x1b[0m\n'}
+[11.446078] (-) TimerEvent: {}
+[11.546508] (-) TimerEvent: {}
+[11.590788] (module_5_assignment) StdoutLine: {'line': b'[ 66%] Built target lqr_lib\n'}
+[11.594965] (module_5_assignment) StdoutLine: {'line': b'[ 66%] Built target lineFollowing\n'}
+[11.613979] (module_5_assignment) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/lqr_nodetst.dir/src/lqr_node.cpp.o\x1b[0m\n'}
+[11.646647] (-) TimerEvent: {}
+[11.747011] (-) TimerEvent: {}
+[11.847398] (-) TimerEvent: {}
+[11.947748] (-) TimerEvent: {}
+[12.048124] (-) TimerEvent: {}
+[12.148764] (-) TimerEvent: {}
+[12.249113] (-) TimerEvent: {}
+[12.349451] (-) TimerEvent: {}
+[12.449844] (-) TimerEvent: {}
+[12.550573] (-) TimerEvent: {}
+[12.650958] (-) TimerEvent: {}
+[12.751350] (-) TimerEvent: {}
+[12.852052] (-) TimerEvent: {}
+[12.952646] (-) TimerEvent: {}
+[13.053033] (-) TimerEvent: {}
+[13.153447] (-) TimerEvent: {}
+[13.253842] (-) TimerEvent: {}
+[13.354239] (-) TimerEvent: {}
+[13.454650] (-) TimerEvent: {}
+[13.555033] (-) TimerEvent: {}
+[13.655445] (-) TimerEvent: {}
+[13.755838] (-) TimerEvent: {}
+[13.856224] (-) TimerEvent: {}
+[13.956622] (-) TimerEvent: {}
+[14.057003] (-) TimerEvent: {}
+[14.157421] (-) TimerEvent: {}
+[14.250535] (module_5_assignment) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[14.250928] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[14.250975] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[14.251018] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[14.251060] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[14.251100] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[14.251149] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[14.251189] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[14.251233] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[14.251273] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[14.251313] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[14.251352] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/include/lqr_node.hpp:8\x1b[m\x1b[K,\n'}
+[14.251411] (module_5_assignment) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/src/lqr_node.cpp:3\x1b[m\x1b[K:\n'}
+[14.251452] (module_5_assignment) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/src/lqr_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid LqrNode::controlLoopCallback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[14.251494] (module_5_assignment) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/src/lqr_node.cpp:136:42:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%zu\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.251538] (module_5_assignment) StderrLine: {'line': b'  136 |   RCLCPP_INFO(rclcpp::get_logger("LQR"), \x1b[01;35m\x1b[K"Current Waypoint:=%zu "\x1b[m\x1b[K, \x1b[32m\x1b[Kcurrent_waypoint\x1b[m\x1b[K); // Change %d to %zu\n'}
+[14.251579] (module_5_assignment) StderrLine: {'line': b'      |                                          \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[14.251618] (module_5_assignment) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[14.251657] (module_5_assignment) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[Kint\x1b[m\x1b[K\n'}
+[14.251697] (module_5_assignment) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/src/lqr_node.cpp:136:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[14.251737] (module_5_assignment) StderrLine: {'line': b'  136 | RCLCPP_INFO(rclcpp::get_logger("LQR"), "Current Waypoint:=\x1b[01;36m\x1b[K%zu\x1b[m\x1b[K ", current_waypoint); // Change %d to %zu\n'}
+[14.251777] (module_5_assignment) StderrLine: {'line': b'      |                                                           \x1b[01;36m\x1b[K~~^\x1b[m\x1b[K\n'}
+[14.251817] (module_5_assignment) StderrLine: {'line': b'      |                                                             \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[14.251856] (module_5_assignment) StderrLine: {'line': b'      |                                                             \x1b[01;36m\x1b[Klong unsigned int\x1b[m\x1b[K\n'}
+[14.251904] (module_5_assignment) StderrLine: {'line': b'      |                                                           \x1b[32m\x1b[K%u\x1b[m\x1b[K\n'}
+[14.257557] (-) TimerEvent: {}
+[14.311823] (module_5_assignment) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/src/lqr_node.cpp:163:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<State>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[14.312072] (module_5_assignment) StderrLine: {'line': b'  163 |     if (\x1b[01;35m\x1b[Kcurrent_waypoint >= waypoints_.size()\x1b[m\x1b[K)\n'}
+[14.312168] (module_5_assignment) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[14.357702] (-) TimerEvent: {}
+[14.458094] (-) TimerEvent: {}
+[14.558509] (-) TimerEvent: {}
+[14.658908] (-) TimerEvent: {}
+[14.759303] (-) TimerEvent: {}
+[14.859710] (-) TimerEvent: {}
+[14.960084] (-) TimerEvent: {}
+[15.060465] (-) TimerEvent: {}
+[15.160844] (-) TimerEvent: {}
+[15.261223] (-) TimerEvent: {}
+[15.361620] (-) TimerEvent: {}
+[15.462001] (-) TimerEvent: {}
+[15.562401] (-) TimerEvent: {}
+[15.662781] (-) TimerEvent: {}
+[15.763158] (-) TimerEvent: {}
+[15.863530] (-) TimerEvent: {}
+[15.963862] (-) TimerEvent: {}
+[16.064247] (-) TimerEvent: {}
+[16.164646] (-) TimerEvent: {}
+[16.265024] (-) TimerEvent: {}
+[16.365420] (-) TimerEvent: {}
+[16.465786] (-) TimerEvent: {}
+[16.566157] (-) TimerEvent: {}
+[16.666555] (-) TimerEvent: {}
+[16.766932] (-) TimerEvent: {}
+[16.867313] (-) TimerEvent: {}
+[16.967717] (-) TimerEvent: {}
+[17.068088] (-) TimerEvent: {}
+[17.168466] (-) TimerEvent: {}
+[17.268837] (-) TimerEvent: {}
+[17.369210] (-) TimerEvent: {}
+[17.469611] (-) TimerEvent: {}
+[17.569992] (-) TimerEvent: {}
+[17.670394] (-) TimerEvent: {}
+[17.770774] (-) TimerEvent: {}
+[17.871153] (-) TimerEvent: {}
+[17.971561] (-) TimerEvent: {}
+[18.071945] (-) TimerEvent: {}
+[18.172298] (-) TimerEvent: {}
+[18.272659] (-) TimerEvent: {}
+[18.373038] (-) TimerEvent: {}
+[18.473448] (-) TimerEvent: {}
+[18.573805] (-) TimerEvent: {}
+[18.674182] (-) TimerEvent: {}
+[18.774576] (-) TimerEvent: {}
+[18.874956] (-) TimerEvent: {}
+[18.975331] (-) TimerEvent: {}
+[19.075732] (-) TimerEvent: {}
+[19.176098] (-) TimerEvent: {}
+[19.276480] (-) TimerEvent: {}
+[19.376856] (-) TimerEvent: {}
+[19.477238] (-) TimerEvent: {}
+[19.577625] (-) TimerEvent: {}
+[19.678012] (-) TimerEvent: {}
+[19.778406] (-) TimerEvent: {}
+[19.878786] (-) TimerEvent: {}
+[19.979151] (-) TimerEvent: {}
+[20.079536] (-) TimerEvent: {}
+[20.179899] (-) TimerEvent: {}
+[20.280280] (-) TimerEvent: {}
+[20.380674] (-) TimerEvent: {}
+[20.481056] (-) TimerEvent: {}
+[20.581433] (-) TimerEvent: {}
+[20.681811] (-) TimerEvent: {}
+[20.782157] (-) TimerEvent: {}
+[20.882492] (-) TimerEvent: {}
+[20.982865] (-) TimerEvent: {}
+[21.083269] (-) TimerEvent: {}
+[21.183940] (-) TimerEvent: {}
+[21.284339] (-) TimerEvent: {}
+[21.384743] (-) TimerEvent: {}
+[21.485138] (-) TimerEvent: {}
+[21.585513] (-) TimerEvent: {}
+[21.685898] (-) TimerEvent: {}
+[21.786299] (-) TimerEvent: {}
+[21.886708] (-) TimerEvent: {}
+[21.987054] (-) TimerEvent: {}
+[22.087394] (-) TimerEvent: {}
+[22.187754] (-) TimerEvent: {}
+[22.288122] (-) TimerEvent: {}
+[22.388491] (-) TimerEvent: {}
+[22.488863] (-) TimerEvent: {}
+[22.589225] (-) TimerEvent: {}
+[22.689625] (-) TimerEvent: {}
+[22.789991] (-) TimerEvent: {}
+[22.890360] (-) TimerEvent: {}
+[22.990759] (-) TimerEvent: {}
+[23.091125] (-) TimerEvent: {}
+[23.191487] (-) TimerEvent: {}
+[23.291857] (-) TimerEvent: {}
+[23.392223] (-) TimerEvent: {}
+[23.492614] (-) TimerEvent: {}
+[23.592984] (-) TimerEvent: {}
+[23.693353] (-) TimerEvent: {}
+[23.793737] (-) TimerEvent: {}
+[23.894102] (-) TimerEvent: {}
+[23.994463] (-) TimerEvent: {}
+[24.094831] (-) TimerEvent: {}
+[24.195196] (-) TimerEvent: {}
+[24.295561] (-) TimerEvent: {}
+[24.395876] (-) TimerEvent: {}
+[24.496245] (-) TimerEvent: {}
+[24.596631] (-) TimerEvent: {}
+[24.697267] (-) TimerEvent: {}
+[24.799675] (-) TimerEvent: {}
+[24.900041] (-) TimerEvent: {}
+[25.000438] (-) TimerEvent: {}
+[25.100796] (-) TimerEvent: {}
+[25.201159] (-) TimerEvent: {}
+[25.301526] (-) TimerEvent: {}
+[25.401891] (-) TimerEvent: {}
+[25.502260] (-) TimerEvent: {}
+[25.602640] (-) TimerEvent: {}
+[25.703047] (-) TimerEvent: {}
+[25.803448] (-) TimerEvent: {}
+[25.903812] (-) TimerEvent: {}
+[26.004161] (-) TimerEvent: {}
+[26.104532] (-) TimerEvent: {}
+[26.204946] (-) TimerEvent: {}
+[26.305411] (-) TimerEvent: {}
+[26.405888] (-) TimerEvent: {}
+[26.506315] (-) TimerEvent: {}
+[26.606773] (-) TimerEvent: {}
+[26.707228] (-) TimerEvent: {}
+[26.807606] (-) TimerEvent: {}
+[26.908029] (-) TimerEvent: {}
+[27.008427] (-) TimerEvent: {}
+[27.108820] (-) TimerEvent: {}
+[27.166562] (module_5_assignment) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable lqr_nodetst\x1b[0m\n'}
+[27.208943] (-) TimerEvent: {}
+[27.309491] (-) TimerEvent: {}
+[27.410130] (-) TimerEvent: {}
+[27.510687] (-) TimerEvent: {}
+[27.611246] (-) TimerEvent: {}
+[27.712089] (-) TimerEvent: {}
+[27.812978] (-) TimerEvent: {}
+[27.913730] (-) TimerEvent: {}
+[28.014151] (-) TimerEvent: {}
+[28.114531] (-) TimerEvent: {}
+[28.214918] (-) TimerEvent: {}
+[28.315330] (-) TimerEvent: {}
+[28.415779] (-) TimerEvent: {}
+[28.516228] (-) TimerEvent: {}
+[28.575194] (module_5_assignment) StdoutLine: {'line': b'[100%] Built target lqr_nodetst\n'}
+[28.588953] (module_5_assignment) CommandEnded: {'returncode': 0}
+[28.616422] (-) TimerEvent: {}
+[28.626572] (module_5_assignment) JobProgress: {'identifier': 'module_5_assignment', 'progress': 'install'}
+[28.637110] (module_5_assignment) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment'], 'cwd': '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'kushal16'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/kushal16/robotisim_ws/install/ros2_kitti_publishers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kushal16'), ('OLDPWD', '/home/kushal16/rse_ws1/robotics_software_engineer'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1492'), ('SYSTEMD_EXEC_PID', '1669'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7045'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/kushal16/rse_ws1/robotics_software_engineer/install:/home/kushal16/rse_ws1/install:/home/kushal16/robotisim_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kushal16'), ('JOURNAL_STREAM', '8:7661'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kushal16'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kushal16-ros2Ubuntu:@/tmp/.ICE-unix/1638,unix/kushal16-ros2Ubuntu:/tmp/.ICE-unix/1638'), ('INVOCATION_ID', '7ab931db8b20418994706dc075a9691d'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Y7HWU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/kushal16/rse_ws1/install/robot_sensing_debug:/home/kushal16/rse_ws1/install/module_8_assignment:/home/kushal16/rse_ws1/install/module_7_assignment:/home/kushal16/rse_ws1/install/module_6_assignment:/home/kushal16/rse_ws1/install/module_5_assignment:/home/kushal16/rse_ws1/install/module_4_assignment:/home/kushal16/rse_ws1/install/module_3_assignment:/home/kushal16/rse_ws1/install/module_2_assignment:/home/kushal16/rse_ws1/install/module_1_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/robot_sensing_debug:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_8_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_7_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_6_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_5_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_4_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_3_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_2_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_1_assignment:/home/kushal16/robotisim_ws/install/ros2_kitti_publishers:/home/kushal16/robotisim_ws/install/maze_solving:/home/kushal16/robotisim_ws/install/drive_mobile_robot:/home/kushal16/robotisim_ws/install/custom_robots:/home/kushal16/robotisim_ws/install/control_systems:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:7b7ae285-f0df-42be-97a4-abc72b3ca0b3'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/build/module_5_assignment'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/kushal16/robotisim_ws/install/pykitti/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/kushal16/rse_ws1/install/robot_sensing_debug:/home/kushal16/rse_ws1/install/module_8_assignment:/home/kushal16/rse_ws1/install/module_7_assignment:/home/kushal16/rse_ws1/install/module_6_assignment:/home/kushal16/rse_ws1/install/module_5_assignment:/home/kushal16/rse_ws1/install/module_4_assignment:/home/kushal16/rse_ws1/install/module_3_assignment:/home/kushal16/rse_ws1/install/module_2_assignment:/home/kushal16/rse_ws1/install/module_1_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/robot_sensing_debug:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_8_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_7_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_6_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_5_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_4_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_3_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_2_assignment:/home/kushal16/rse_ws1/robotics_software_engineer/install/module_1_assignment:/home/kushal16/robotisim_ws/install/ros2_kitti_publishers:/home/kushal16/robotisim_ws/install/maze_solving:/home/kushal16/robotisim_ws/install/drive_mobile_robot:/home/kushal16/robotisim_ws/install/custom_robots:/home/kushal16/robotisim_ws/install/control_systems:/opt/ros/humble')]), 'shell': False}
+[28.644666] (module_5_assignment) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.644947] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/lib/module_5_assignment/liblqr_lib.a\n'}
+[28.654333] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/lib/module_5_assignment/lqr_nodetst\n'}
+[28.665986] (module_5_assignment) StdoutLine: {'line': b'-- Set runtime path of "/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/lib/module_5_assignment/lqr_nodetst" to ""\n'}
+[28.666244] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/lib/module_5_assignment/lineFollowing\n'}
+[28.669842] (module_5_assignment) StdoutLine: {'line': b'-- Set runtime path of "/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/lib/module_5_assignment/lineFollowing" to ""\n'}
+[28.670097] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/launch\n'}
+[28.670322] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/launch/camera_line_following.launch.py\n'}
+[28.670468] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/launch/lqr_nodetst.launch.py\n'}
+[28.670870] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/worlds\n'}
+[28.671007] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/worlds/line_following.world\n'}
+[28.671238] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/urdf\n'}
+[28.671458] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/ament_index/resource_index/package_run_dependencies/module_5_assignment\n'}
+[28.671591] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/ament_index/resource_index/parent_prefix_path/module_5_assignment\n'}
+[28.671771] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/environment/ament_prefix_path.sh\n'}
+[28.671918] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/environment/ament_prefix_path.dsv\n'}
+[28.672036] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/environment/path.sh\n'}
+[28.672156] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/environment/path.dsv\n'}
+[28.672350] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/local_setup.bash\n'}
+[28.672483] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/local_setup.sh\n'}
+[28.672634] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/local_setup.zsh\n'}
+[28.672799] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/local_setup.dsv\n'}
+[28.672928] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/package.dsv\n'}
+[28.673126] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/ament_index/resource_index/packages/module_5_assignment\n'}
+[28.673352] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/cmake/module_5_assignmentConfig.cmake\n'}
+[28.673610] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/cmake/module_5_assignmentConfig-version.cmake\n'}
+[28.673735] (module_5_assignment) StdoutLine: {'line': b'-- Installing: /home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/install/module_5_assignment/share/module_5_assignment/package.xml\n'}
+[28.676059] (module_5_assignment) CommandEnded: {'returncode': 0}
+[28.716531] (-) TimerEvent: {}
+[28.725182] (module_5_assignment) JobEnded: {'identifier': 'module_5_assignment', 'rc': 0}
+[28.725856] (-) EventReactorShutdown: {}
