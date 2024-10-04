@@ -1,0 +1,193 @@
+[0.000000] (-) TimerEvent: {}
+[0.000236] (module_4_assignment) JobQueued: {'identifier': 'module_4_assignment', 'dependencies': OrderedDict()}
+[0.000280] (module_4_assignment) JobStarted: {'identifier': 'module_4_assignment'}
+[0.009430] (module_4_assignment) JobProgress: {'identifier': 'module_4_assignment', 'progress': 'cmake'}
+[0.009815] (module_4_assignment) Command: {'cmd': ['/usr/bin/cmake', '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment', '-DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment'], 'cwd': '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'kushal16'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/kushal16/robotisim_ws/install/ros2_kitti_publishers/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kushal16'), ('OLDPWD', '/home/kushal16/rse_ws/src/robotics_software_engineer'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1606'), ('SYSTEMD_EXEC_PID', '1774'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6431'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/kushal16/rse_ws/install:/home/kushal16/robotisim_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'kushal16'), ('JOURNAL_STREAM', '8:36253'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kushal16'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kushal16-ros2Ubuntu:@/tmp/.ICE-unix/1753,unix/kushal16-ros2Ubuntu:/tmp/.ICE-unix/1753'), ('INVOCATION_ID', 'f0c2301ecd5e403b92ab3a88efbd0329'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.L7XJR2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/kushal16/robotisim_ws/install/ros2_kitti_publishers:/home/kushal16/robotisim_ws/install/maze_solving:/home/kushal16/robotisim_ws/install/drive_mobile_robot:/home/kushal16/robotisim_ws/install/custom_robots:/home/kushal16/rse_ws/install/robot_sensing:/home/kushal16/rse_ws/install/module_9_assignment:/home/kushal16/rse_ws/install/module_8_assignment:/home/kushal16/rse_ws/install/module_7_assignment:/home/kushal16/rse_ws/install/module_6_assignment:/home/kushal16/rse_ws/install/module_5_assignment:/home/kushal16/rse_ws/install/module_4_assignment:/home/kushal16/rse_ws/install/module_3_assignment:/home/kushal16/rse_ws/install/module_2_assignment:/home/kushal16/rse_ws/install/module_1_assignment:/home/kushal16/rse_ws/install/module_10_assignment:/home/kushal16/rse_ws/install/drive_mobile_robot:/home/kushal16/rse_ws/install/custom_robots:/home/kushal16/rse_ws/install/control_systems:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:dcfc5dc6-e4f9-4757-9ddf-00c4ee50e25d'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/kushal16/robotisim_ws/install/pykitti/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/kushal16/robotisim_ws/install/ros2_kitti_publishers:/home/kushal16/robotisim_ws/install/maze_solving:/home/kushal16/robotisim_ws/install/drive_mobile_robot:/home/kushal16/robotisim_ws/install/custom_robots:/home/kushal16/rse_ws/install/robot_sensing:/home/kushal16/rse_ws/install/module_9_assignment:/home/kushal16/rse_ws/install/module_8_assignment:/home/kushal16/rse_ws/install/module_7_assignment:/home/kushal16/rse_ws/install/module_6_assignment:/home/kushal16/rse_ws/install/module_5_assignment:/home/kushal16/rse_ws/install/module_4_assignment:/home/kushal16/rse_ws/install/module_3_assignment:/home/kushal16/rse_ws/install/module_2_assignment:/home/kushal16/rse_ws/install/module_1_assignment:/home/kushal16/rse_ws/install/module_10_assignment:/home/kushal16/rse_ws/install/drive_mobile_robot:/home/kushal16/rse_ws/install/custom_robots:/home/kushal16/rse_ws/install/control_systems:/opt/ros/humble')]), 'shell': False}
+[0.077209] (module_4_assignment) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099352] (-) TimerEvent: {}
+[0.141139] (module_4_assignment) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.149403] (module_4_assignment) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199510] (-) TimerEvent: {}
+[0.224074] (module_4_assignment) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.230553] (module_4_assignment) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.230888] (module_4_assignment) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.231359] (module_4_assignment) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.234559] (module_4_assignment) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299669] (-) TimerEvent: {}
+[0.319999] (module_4_assignment) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.326375] (module_4_assignment) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.326564] (module_4_assignment) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.327150] (module_4_assignment) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.333601] (module_4_assignment) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399950] (-) TimerEvent: {}
+[0.467860] (module_4_assignment) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.500065] (-) TimerEvent: {}
+[0.570560] (module_4_assignment) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.600183] (-) TimerEvent: {}
+[0.628762] (module_4_assignment) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.637981] (module_4_assignment) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.648936] (module_4_assignment) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.665311] (module_4_assignment) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.688496] (module_4_assignment) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700274] (-) TimerEvent: {}
+[0.767509] (module_4_assignment) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.771766] (module_4_assignment) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.800387] (-) TimerEvent: {}
+[0.900677] (-) TimerEvent: {}
+[0.906881] (module_4_assignment) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.938382] (module_4_assignment) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.989067] (module_4_assignment) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.000797] (-) TimerEvent: {}
+[1.003239] (module_4_assignment) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.084170] (module_4_assignment) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.084638] (module_4_assignment) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.100922] (-) TimerEvent: {}
+[1.163894] (module_4_assignment) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.164788] (module_4_assignment) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.201274] (-) TimerEvent: {}
+[1.301849] (-) TimerEvent: {}
+[1.308662] (module_4_assignment) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.348530] (module_4_assignment) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.401978] (-) TimerEvent: {}
+[1.422039] (module_4_assignment) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[1.441126] (module_4_assignment) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[1.458281] (module_4_assignment) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[1.480008] (module_4_assignment) StdoutLine: {'line': b'--   Found eigen3, version 3.4.0\n'}
+[1.502119] (-) TimerEvent: {}
+[1.536166] (module_4_assignment) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") \n'}
+[1.536476] (module_4_assignment) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[1.564164] (module_4_assignment) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization \n'}
+[1.583416] (module_4_assignment) StdoutLine: {'line': b"-- Checking for module 'flann'\n"}
+[1.602231] (-) TimerEvent: {}
+[1.603277] (module_4_assignment) StdoutLine: {'line': b'--   Found flann, version 1.9.1\n'}
+[1.662476] (module_4_assignment) StdoutLine: {'line': b'-- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  \n'}
+[1.662657] (module_4_assignment) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[1.694362] (module_4_assignment) StdoutLine: {'line': b'-- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  \n'}
+[1.699425] (module_4_assignment) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX \n'}
+[1.702329] (-) TimerEvent: {}
+[1.802783] (-) TimerEvent: {}
+[1.856703] (module_4_assignment) StdoutLine: {'line': b'-- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") \n'}
+[1.856939] (module_4_assignment) StdoutLine: {'line': b'-- Found MPI: TRUE (found version "3.1") found components: C \n'}
+[1.858907] (module_4_assignment) StdoutLine: {'line': b'-- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") \n'}
+[1.867364] (module_4_assignment) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") \n'}
+[1.882343] (module_4_assignment) StdoutLine: {'line': b'-- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37") \n'}
+[1.892243] (module_4_assignment) StdoutLine: {'line': b'-- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") \n'}
+[1.903115] (-) TimerEvent: {}
+[2.003441] (-) TimerEvent: {}
+[2.008168] (module_4_assignment) StdoutLine: {'line': b'-- Found X11: /usr/include   \n'}
+[2.008462] (module_4_assignment) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so\n'}
+[2.091032] (module_4_assignment) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found\n'}
+[2.091298] (module_4_assignment) StdoutLine: {'line': b'-- Looking for gethostbyname\n'}
+[2.103573] (-) TimerEvent: {}
+[2.167466] (module_4_assignment) StdoutLine: {'line': b'-- Looking for gethostbyname - found\n'}
+[2.167736] (module_4_assignment) StdoutLine: {'line': b'-- Looking for connect\n'}
+[2.203679] (-) TimerEvent: {}
+[2.246385] (module_4_assignment) StdoutLine: {'line': b'-- Looking for connect - found\n'}
+[2.246582] (module_4_assignment) StdoutLine: {'line': b'-- Looking for remove\n'}
+[2.303808] (-) TimerEvent: {}
+[2.321940] (module_4_assignment) StdoutLine: {'line': b'-- Looking for remove - found\n'}
+[2.322213] (module_4_assignment) StdoutLine: {'line': b'-- Looking for shmat\n'}
+[2.397219] (module_4_assignment) StdoutLine: {'line': b'-- Looking for shmat - found\n'}
+[2.397487] (module_4_assignment) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE\n'}
+[2.404278] (-) TimerEvent: {}
+[2.475984] (module_4_assignment) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE - found\n'}
+[2.504408] (-) TimerEvent: {}
+[2.591839] (module_4_assignment) StdoutLine: {'line': b'-- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.4.7") \n'}
+[2.593184] (module_4_assignment) StdoutLine: {'line': b'-- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  \n'}
+[2.595313] (module_4_assignment) StdoutLine: {'line': b'-- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.3") \n'}
+[2.596486] (module_4_assignment) StdoutLine: {'line': b'-- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.2.5") \n'}
+[2.604524] (-) TimerEvent: {}
+[2.608961] (module_4_assignment) StdoutLine: {'line': b'-- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") \n'}
+[2.614177] (module_4_assignment) StdoutLine: {'line': b'-- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.3.0")  \n'}
+[2.617018] (module_4_assignment) StdoutLine: {'line': b'-- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.11.1") \n'}
+[2.621348] (module_4_assignment) StdoutLine: {'line': b'-- Found utf8cpp: /usr/include/utf8cpp  \n'}
+[2.704639] (-) TimerEvent: {}
+[2.730917] (module_4_assignment) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[2.752241] (module_4_assignment) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.25\n'}
+[2.804783] (-) TimerEvent: {}
+[2.808792] (module_4_assignment) StdoutLine: {'line': b'-- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  \n'}
+[2.809641] (module_4_assignment) StdoutLine: {'line': b'-- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") \n'}
+[2.809806] (module_4_assignment) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.896179] (module_4_assignment) StdoutLine: {'line': b'-- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") \n'}
+[2.896432] (module_4_assignment) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.896636] (module_4_assignment) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[2.904907] (-) TimerEvent: {}
+[3.005261] (-) TimerEvent: {}
+[3.042990] (module_4_assignment) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[3.050672] (module_4_assignment) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[3.057417] (module_4_assignment) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[3.105389] (-) TimerEvent: {}
+[3.198944] (module_4_assignment) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[3.205500] (-) TimerEvent: {}
+[3.305809] (-) TimerEvent: {}
+[3.344137] (module_4_assignment) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[3.406270] (-) TimerEvent: {}
+[3.480096] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[3.480895] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  \n'}
+[3.481102] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[3.481647] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  \n'}
+[3.481786] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[3.482384] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  \n'}
+[3.482485] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[3.483063] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  \n'}
+[3.483194] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[3.483817] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  \n'}
+[3.483948] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[3.484616] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  \n'}
+[3.484773] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[3.484941] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_2D: /usr/include/pcl-1.12  \n'}
+[3.485075] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[3.485247] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_GEOMETRY: /usr/include/pcl-1.12  \n'}
+[3.485354] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[3.485996] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  \n'}
+[3.486194] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[3.486815] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  \n'}
+[3.487000] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[3.487632] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  \n'}
+[3.487843] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[3.488535] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  \n'}
+[3.488762] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_VISUALIZATION\n'}
+[3.489370] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  \n'}
+[3.489573] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_SURFACE\n'}
+[3.490176] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  \n'}
+[3.490353] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_REGISTRATION\n'}
+[3.490950] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  \n'}
+[3.491172] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_KEYPOINTS\n'}
+[3.491838] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  \n'}
+[3.492030] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_TRACKING\n'}
+[3.492668] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  \n'}
+[3.492832] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_RECOGNITION\n'}
+[3.493438] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  \n'}
+[3.493689] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_STEREO\n'}
+[3.494343] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  \n'}
+[3.494502] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_APPS\n'}
+[3.495091] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  \n'}
+[3.495588] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_IN_HAND_SCANNER\n'}
+[3.495804] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  \n'}
+[3.495905] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_MODELER\n'}
+[3.496095] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_MODELER: /usr/include/pcl-1.12  \n'}
+[3.496196] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_POINT_CLOUD_EDITOR\n'}
+[3.496406] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  \n'}
+[3.496504] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_OUTOFCORE\n'}
+[3.497210] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  \n'}
+[3.497406] (module_4_assignment) StdoutLine: {'line': b'-- looking for PCL_PEOPLE\n'}
+[3.498063] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  \n'}
+[3.498766] (module_4_assignment) StdoutLine: {'line': b'-- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL  \n'}
+[3.501166] (module_4_assignment) StdoutLine: {'line': b'-- Found Pcap: /usr/lib/x86_64-linux-gnu/libpcap.so  \n'}
+[3.506425] (module_4_assignment) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.506658] (-) TimerEvent: {}
+[3.560002] (module_4_assignment) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):\n'}
+[3.560288] (module_4_assignment) StderrLine: {'line': b"  ament_package_xml() package name 'module_4_assignment' in '/package.xml'\n"}
+[3.560395] (module_4_assignment) StderrLine: {'line': b"  does not match current PROJECT_NAME 'maze_solving'.  You must call\n"}
+[3.560485] (module_4_assignment) StderrLine: {'line': b'  project() with the same package name before.\n'}
+[3.560532] (module_4_assignment) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[3.560575] (module_4_assignment) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[3.560619] (module_4_assignment) StderrLine: {'line': b'  CMakeLists.txt:57 (ament_lint_auto_find_test_dependencies)\n'}
+[3.560663] (module_4_assignment) StderrLine: {'line': b'\n'}
+[3.560705] (module_4_assignment) StderrLine: {'line': b'\x1b[0m\n'}
+[3.560748] (module_4_assignment) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.560799] (module_4_assignment) StdoutLine: {'line': b'See also "/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment/CMakeFiles/CMakeOutput.log".\n'}
+[3.580514] (module_4_assignment) CommandEnded: {'returncode': 1}
+[3.601638] (module_4_assignment) JobEnded: {'identifier': 'module_4_assignment', 'rc': 1}
+[3.606786] (-) TimerEvent: {}
+[3.612394] (-) EventReactorShutdown: {}

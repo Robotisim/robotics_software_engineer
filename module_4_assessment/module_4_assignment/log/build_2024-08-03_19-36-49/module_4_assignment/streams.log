@@ -1,0 +1,75 @@
+[0.013s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment -DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment
+[0.024s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.133s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.159s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.160s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.166s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.175s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.189s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.239s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.240s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.368s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.500s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.536s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.606s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.635s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.668s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.962s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.969s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.969s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[1.115s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.121s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.129s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.264s] -- Found Qhull version 8.0.2
+[1.407s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.546s] -- looking for PCL_COMMON
+[1.546s] -- looking for PCL_KDTREE
+[1.546s] -- looking for PCL_OCTREE
+[1.546s] -- looking for PCL_SEARCH
+[1.547s] -- looking for PCL_SAMPLE_CONSENSUS
+[1.547s] -- looking for PCL_FILTERS
+[1.547s] -- looking for PCL_2D
+[1.547s] -- looking for PCL_GEOMETRY
+[1.548s] -- looking for PCL_IO
+[1.548s] -- looking for PCL_FEATURES
+[1.548s] -- looking for PCL_ML
+[1.549s] -- looking for PCL_SEGMENTATION
+[1.549s] -- looking for PCL_VISUALIZATION
+[1.549s] -- looking for PCL_SURFACE
+[1.550s] -- looking for PCL_REGISTRATION
+[1.550s] -- looking for PCL_KEYPOINTS
+[1.550s] -- looking for PCL_TRACKING
+[1.551s] -- looking for PCL_RECOGNITION
+[1.551s] -- looking for PCL_STEREO
+[1.551s] -- looking for PCL_APPS
+[1.552s] -- looking for PCL_IN_HAND_SCANNER
+[1.552s] -- looking for PCL_MODELER
+[1.552s] -- looking for PCL_POINT_CLOUD_EDITOR
+[1.552s] -- looking for PCL_OUTOFCORE
+[1.553s] -- looking for PCL_PEOPLE
+[1.557s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.630s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.630s] -- Configured cppcheck include dirs: 
+[1.630s] -- Configured cppcheck exclude dirs and/or files: 
+[1.633s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.638s] -- Added test 'lint_cmake' to check CMake code style
+[1.640s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.656s] -- Added test 'uncrustify' to check C / C++ code style
+[1.656s] -- Configured uncrustify additional arguments: 
+[1.658s] -- Added test 'xmllint' to check XML markup files
+[1.659s] -- Configuring done
+[1.666s] [31mCMake Error at CMakeLists.txt:26 (add_executable):
+[1.666s]   Cannot find source file:
+[1.666s] 
+[1.666s]     src/maze_solver/maze_solving_sub.cpp
+[1.666s] 
+[1.666s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.666s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.667s] 
+[1.667s] [0m
+[1.667s] [31mCMake Error at CMakeLists.txt:26 (add_executable):
+[1.667s]   No SOURCES given to target: mazesolver
+[1.667s] 
+[1.667s] [0m
+[1.667s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[1.682s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment -DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment

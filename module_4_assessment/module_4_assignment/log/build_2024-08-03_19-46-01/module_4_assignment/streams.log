@@ -1,0 +1,106 @@
+[0.013s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment -DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment
+[0.025s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.131s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.157s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.159s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.164s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.174s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.187s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.236s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.238s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.362s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.499s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.537s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.606s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.635s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.667s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.956s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.962s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.962s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[1.103s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.111s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.118s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.262s] -- Found Qhull version 8.0.2
+[1.403s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.543s] -- looking for PCL_COMMON
+[1.543s] -- looking for PCL_KDTREE
+[1.543s] -- looking for PCL_OCTREE
+[1.543s] -- looking for PCL_SEARCH
+[1.543s] -- looking for PCL_SAMPLE_CONSENSUS
+[1.544s] -- looking for PCL_FILTERS
+[1.544s] -- looking for PCL_2D
+[1.544s] -- looking for PCL_GEOMETRY
+[1.544s] -- looking for PCL_IO
+[1.545s] -- looking for PCL_FEATURES
+[1.545s] -- looking for PCL_ML
+[1.545s] -- looking for PCL_SEGMENTATION
+[1.546s] -- looking for PCL_VISUALIZATION
+[1.546s] -- looking for PCL_SURFACE
+[1.546s] -- looking for PCL_REGISTRATION
+[1.547s] -- looking for PCL_KEYPOINTS
+[1.547s] -- looking for PCL_TRACKING
+[1.547s] -- looking for PCL_RECOGNITION
+[1.548s] -- looking for PCL_STEREO
+[1.548s] -- looking for PCL_APPS
+[1.549s] -- looking for PCL_IN_HAND_SCANNER
+[1.549s] -- looking for PCL_MODELER
+[1.549s] -- looking for PCL_POINT_CLOUD_EDITOR
+[1.549s] -- looking for PCL_OUTOFCORE
+[1.549s] -- looking for PCL_PEOPLE
+[1.551s] [0mContents of src directory:[0m
+[1.552s] [0mContents of src/maze_solver directory:[0m
+[1.553s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.636s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.636s] -- Configured cppcheck include dirs: 
+[1.636s] -- Configured cppcheck exclude dirs and/or files: 
+[1.640s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.646s] -- Added test 'lint_cmake' to check CMake code style
+[1.649s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.673s] -- Added test 'uncrustify' to check C / C++ code style
+[1.673s] -- Configured uncrustify additional arguments: 
+[1.676s] -- Added test 'xmllint' to check XML markup files
+[1.677s] -- Configuring done
+[1.690s] -- Generating done
+[1.692s] -- Build files have been written to: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment
+[1.708s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment -DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment
+[1.711s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment -- -j16 -l16
+[1.731s] /usr/bin/cmake -S/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment -B/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment --check-build-system CMakeFiles/Makefile.cmake 0
+[1.745s] /usr/bin/cmake -E cmake_progress_start /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment/CMakeFiles /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment//CMakeFiles/progress.marks
+[1.754s] /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+[1.756s] gmake[1]: Entering directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+[1.756s] /usr/bin/gmake  -f CMakeFiles/mazesolver.dir/build.make CMakeFiles/mazesolver.dir/depend
+[1.757s] gmake[2]: Entering directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+[1.757s] cd /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment/CMakeFiles/mazesolver.dir/DependInfo.cmake --color=
+[1.766s] Dependencies file "CMakeFiles/mazesolver.dir/maze_solving/src/maze_solving_sub.cpp.o.d" is newer than depends file "/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment/CMakeFiles/mazesolver.dir/compiler_depend.internal".
+[1.766s] [35m[1mConsolidate compiler generated dependencies of target mazesolver[0m
+[1.777s] gmake[2]: Leaving directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+[1.777s] /usr/bin/gmake  -f CMakeFiles/mazesolver.dir/build.make CMakeFiles/mazesolver.dir/build
+[1.783s] gmake[2]: Entering directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+[1.783s] gmake[2]: Nothing to be done for 'CMakeFiles/mazesolver.dir/build'.
+[1.783s] gmake[2]: Leaving directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+[1.792s] [100%] Built target mazesolver
+[1.794s] gmake[1]: Leaving directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+[1.794s] /usr/bin/cmake -E cmake_progress_start /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment/CMakeFiles 0
+[1.810s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment -- -j16 -l16
+[1.862s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment
+[1.870s] -- Install configuration: ""
+[1.870s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/lib/module_4_assignment/mazesolver
+[1.870s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/launch
+[1.870s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/worlds
+[1.870s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/urdf
+[1.870s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/ament_index/resource_index/package_run_dependencies/module_4_assignment
+[1.870s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/ament_index/resource_index/parent_prefix_path/module_4_assignment
+[1.870s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/environment/ament_prefix_path.sh
+[1.870s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/environment/ament_prefix_path.dsv
+[1.871s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/environment/path.sh
+[1.871s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/environment/path.dsv
+[1.871s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/local_setup.bash
+[1.871s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/local_setup.sh
+[1.871s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/local_setup.zsh
+[1.871s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/local_setup.dsv
+[1.871s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/package.dsv
+[1.871s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/ament_index/resource_index/packages/module_4_assignment
+[1.871s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/cmake/module_4_assignmentConfig.cmake
+[1.871s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/cmake/module_4_assignmentConfig-version.cmake
+[1.871s] -- Up-to-date: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/share/module_4_assignment/package.xml
+[1.874s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment

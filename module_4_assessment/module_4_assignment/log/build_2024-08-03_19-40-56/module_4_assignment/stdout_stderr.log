@@ -1,0 +1,91 @@
+-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0m** WARNING ** io features related to pcap will be disabled[0m
+-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+-- Found Qhull version 8.0.2
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- looking for PCL_COMMON
+-- looking for PCL_KDTREE
+-- looking for PCL_OCTREE
+-- looking for PCL_SEARCH
+-- looking for PCL_SAMPLE_CONSENSUS
+-- looking for PCL_FILTERS
+-- looking for PCL_2D
+-- looking for PCL_GEOMETRY
+-- looking for PCL_IO
+-- looking for PCL_FEATURES
+-- looking for PCL_ML
+-- looking for PCL_SEGMENTATION
+-- looking for PCL_VISUALIZATION
+-- looking for PCL_SURFACE
+-- looking for PCL_REGISTRATION
+-- looking for PCL_KEYPOINTS
+-- looking for PCL_TRACKING
+-- looking for PCL_RECOGNITION
+-- looking for PCL_STEREO
+-- looking for PCL_APPS
+-- looking for PCL_IN_HAND_SCANNER
+-- looking for PCL_MODELER
+-- looking for PCL_POINT_CLOUD_EDITOR
+-- looking for PCL_OUTOFCORE
+-- looking for PCL_PEOPLE
+Contents of src directory:
+$<TARGET_FILE_DIR:src>
+-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment
+/usr/bin/cmake -S/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment -B/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment/CMakeFiles /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+/usr/bin/gmake  -f CMakeFiles/mazesolver.dir/build.make CMakeFiles/mazesolver.dir/depend
+gmake[2]: Entering directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+cd /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment/CMakeFiles/mazesolver.dir/DependInfo.cmake --color=
+gmake[2]: Leaving directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+/usr/bin/gmake  -f CMakeFiles/mazesolver.dir/build.make CMakeFiles/mazesolver.dir/build
+gmake[2]: Entering directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+[ 50%] [32mBuilding CXX object CMakeFiles/mazesolver.dir/maze_solving/src/maze_solving_sub.cpp.o[0m
+/usr/bin/c++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DDISABLE_PCAP -DRCUTILS_ENABLE_FAULT_INJECTION -I/usr/include/pcl-1.12 -I/usr/include/eigen3 -I/usr/include/ni -I/usr/include/openni2 -isystem /opt/ros/humble/include/rclcpp -isystem /opt/ros/humble/include/geometry_msgs -isystem /opt/ros/humble/include/sensor_msgs -isystem /opt/ros/humble/include/ament_index_cpp -isystem /opt/ros/humble/include/libstatistics_collector -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/fastcdr -isystem /opt/ros/humble/include/rosidl_runtime_cpp -isystem /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/humble/include/rmw -isystem /opt/ros/humble/include/rosidl_typesupport_fastrtps_c -isystem /opt/ros/humble/include/rosidl_typesupport_introspection_c -isystem /opt/ros/humble/include/rosidl_typesupport_introspection_cpp -isystem /opt/ros/humble/include/rcl -isystem /opt/ros/humble/include/rcl_interfaces -isystem /opt/ros/humble/include/rcl_logging_interface -isystem /opt/ros/humble/include/rcl_yaml_param_parser -isystem /opt/ros/humble/include/libyaml_vendor -isystem /opt/ros/humble/include/tracetools -isystem /opt/ros/humble/include/rcpputils -isystem /opt/ros/humble/include/statistics_msgs -isystem /opt/ros/humble/include/rosgraph_msgs -isystem /opt/ros/humble/include/rosidl_typesupport_cpp -isystem /opt/ros/humble/include/rosidl_typesupport_c -isystem /opt/ros/humble/include/std_msgs -Wall -Wextra -Wpedantic -MD -MT CMakeFiles/mazesolver.dir/maze_solving/src/maze_solving_sub.cpp.o -MF CMakeFiles/mazesolver.dir/maze_solving/src/maze_solving_sub.cpp.o.d -o CMakeFiles/mazesolver.dir/maze_solving/src/maze_solving_sub.cpp.o -c /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/maze_solving/src/maze_solving_sub.cpp
+[100%] [32m[1mLinking CXX executable mazesolver[0m
+/usr/bin/cmake -E cmake_link_script CMakeFiles/mazesolver.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/mazesolver.dir/maze_solving/src/maze_solving_sub.cpp.o -o mazesolver  -Wl,-rpath,/opt/ros/humble/lib: /opt/ros/humble/lib/librclcpp.so /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so /usr/lib/x86_64-linux-gnu/libpcap.so /opt/ros/humble/lib/liblibstatistics_collector.so /opt/ros/humble/lib/librcl.so /opt/ros/humble/lib/librmw_implementation.so /opt/ros/humble/lib/libament_index_cpp.so /opt/ros/humble/lib/librcl_logging_spdlog.so /opt/ros/humble/lib/librcl_logging_interface.so /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_py.so /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so /opt/ros/humble/lib/librcl_yaml_param_parser.so /opt/ros/humble/lib/libyaml.so /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_py.so /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_c.so /opt/ros/humble/lib/librosgraph_msgs__rosidl_generator_c.so /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_cpp.so /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_py.so /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c.so /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so /opt/ros/humble/lib/libtracetools.so /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so /opt/ros/humble/lib/libfastcdr.so.1.0.24 /opt/ros/humble/lib/librmw.so /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_py.so /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_c.so /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so /usr/lib/x86_64-linux-gnu/libpython3.10.so /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so /opt/ros/humble/lib/librosidl_typesupport_cpp.so /opt/ros/humble/lib/librosidl_typesupport_c.so /opt/ros/humble/lib/librcpputils.so /opt/ros/humble/lib/librosidl_runtime_c.so /opt/ros/humble/lib/librcutils.so -ldl 
+gmake[2]: Leaving directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+[100%] Built target mazesolver
+gmake[1]: Leaving directory '/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment'
+/usr/bin/cmake -E cmake_progress_start /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/build/module_4_assignment/CMakeFiles 0
+-- Install configuration: ""
+-- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/lib/module_4_assignment/mazesolver
+-- Set runtime path of "/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/install/module_4_assignment/lib/module_4_assignment/mazesolver" to ""
+[31mCMake Error at cmake_install.cmake:66 (file):
+  file INSTALL cannot find
+  "/home/kushal16/rse_ws/src/robotics_software_engineer/module_4_assignment/launch":
+  No such file or directory.
+
+[0m

@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblqr_lib.a CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o
+/usr/bin/ranlib liblqr_lib.a

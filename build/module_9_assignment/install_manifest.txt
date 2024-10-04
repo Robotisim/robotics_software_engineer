@@ -1,0 +1,15 @@
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/ament_index/resource_index/package_run_dependencies/module_9_assignment
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/ament_index/resource_index/parent_prefix_path/module_9_assignment
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/environment/ament_prefix_path.sh
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/environment/ament_prefix_path.dsv
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/environment/path.sh
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/environment/path.dsv
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/local_setup.bash
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/local_setup.sh
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/local_setup.zsh
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/local_setup.dsv
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/package.dsv
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/ament_index/resource_index/packages/module_9_assignment
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/cmake/module_9_assignmentConfig.cmake
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/cmake/module_9_assignmentConfig-version.cmake
+/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_9_assignment/share/module_9_assignment/package.xml

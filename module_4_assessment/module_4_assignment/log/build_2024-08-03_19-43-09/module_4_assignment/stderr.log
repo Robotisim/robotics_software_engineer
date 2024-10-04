@@ -1,0 +1,18 @@
+[0m** WARNING ** io features related to pcap will be disabled[0m
+[0mContents of src directory:[0m
+[0mContents of src/maze_solver directory:[0m
+[31mCMake Error at CMakeLists.txt:39 (add_executable):
+  Cannot find source file:
+
+    src/maze_solver/maze_solving_sub.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+
+[0m
+[31mCMake Error at CMakeLists.txt:39 (add_executable):
+  No SOURCES given to target: mazesolver
+
+[0m
+[0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+gmake: *** [Makefile:270: cmake_check_build_system] Error 1
