@@ -49,7 +49,7 @@ target_link_libraries(lineFollowing ${OpenCV_LIBS})
 
 install(TARGETS
         lqr_lib
-        lqr_nodetst
+        lqr_nodetest
         lineFollowing
        DESTINATION lib/${PROJECT_NAME})
 
