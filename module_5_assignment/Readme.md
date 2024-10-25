@@ -79,16 +79,17 @@ By completing this assignment, you will:
 # Solution
 
    ## Task 1
-    Step 1:- 
+   ### Step 1:- 
       Fork/Clone this repo "~/assignment_ws/src" folder
 
-   Compile the module_5_assignment and source it
+   ### Compile the module_5_assignment and source it
 
       cd ~/assignments_ws
       colcon build --packages-select module_5_assignment
       source install/setup.bash
    
-   Step 2: 
+   ### Step 2: 
+ 
       ros2 launch module_5_assignment camera_line_following.launch.py
 
    Objective:
