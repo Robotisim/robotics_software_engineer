@@ -107,7 +107,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/luqman/robotisim_ws/src/robot_sensing/models/meshes/base.dae</uri>
+              <uri>/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/models/meshes/base.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -129,7 +129,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/luqman/robotisim_ws/src/robot_sensing/models/meshes/base.dae</uri>
+              <uri>/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/models/meshes/base.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -200,7 +200,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/luqman/robotisim_ws/src/robot_sensing/models/meshes/line.dae</uri>
+              <uri>/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/models/meshes/line.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -222,7 +222,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/luqman/robotisim_ws/src/robot_sensing/models/meshes/line.dae</uri>
+              <uri>/home/kushal16/rse_ws1/robotics_software_engineer/module_5_assignment/models/meshes/line.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>

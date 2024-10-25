@@ -1,4 +1,4 @@
-#include <lqr_lib.hpp>
+#include "lqr_lib.hpp"
 
 LQR::LQR(StateMatrix const& Q, InputMatrix const& R, int horizon): Q_(Q), R_(R), horizon_(horizon) {
 /*This is the definition of the constructor, where the actual initialization and logic occur. There are a few important points here:
@@ -11,7 +11,7 @@ LQR::LQR(StateMatrix const& Q, InputMatrix const& R, int horizon): Q_(Q), R_(R),
     A_ = StateMatrix::Zero(3, 3);
     B_ = InputMatrix::Zero(3, 2);
     P_ = Q_; // why we are making P_ and Q_ same
-    
+
     K_ = StateMatrix::Zero(B_.cols(), A_.rows());
 
 }
@@ -53,7 +53,7 @@ void LQR::computeRiccati(InputMatrix B, StateMatrix A) {
         Eigen::MatrixXd Yinv = svd.matrixV() * svd.singularValues().asDiagonal().inverse() * svd.matrixU().transpose();
         P_ = Q_ + A_.transpose() * P_ * A_ - (A_.transpose() * P_ * B_) * Yinv * (B_.transpose() * P_ * A_);
     }
-    
+
     /* wht we have to use JacobiSVD and svd.matrix and svd.singularValues()?
     - to avoid the numerically unstable matrices
     */
@@ -69,6 +69,5 @@ LQR::InputVector LQR::computeOptimalInput(StateVector const& state_error) {
 
     InputVector u = -K_ * state_error;
     return u;
-
 
 }

@@ -1,5 +1,5 @@
 # Module 5 Assignment: Enhancing Robot Control for Smooth Motion
-
+# Assingment
 ## Objective
 
 This assignment is focused on enhancing the control of robots to achieve smoother motion and improved efficiency. You will work on improving a camera-based line-following system, introducing a PI controller, and optimizing the TurtleBot3's path to a goal with minimal energy consumption. Additionally, you will add a position controller to a robotic arm URDF model.
@@ -71,3 +71,25 @@ By completing this assignment, you will:
 - Learn to control robots to create smoother and more efficient motion.
 - Enhance your understanding of using controllers and path planning algorithms to optimize robot behavior.
 
+
+
+
+
+
+# Solution
+
+   ## Task 1
+    Step 1:- 
+      Fork/Clone this repo "~/assignment_ws/src" folder
+
+   Compile the module_5_assignment and source it
+
+      cd ~/assignments_ws
+      colcon build --packages-select module_5_assignment
+      source install/setup.bash
+   
+   Step 2: 
+      ros2 launch module_5_assignment camera_line_following.launch.py
+
+   Objective:
+      Here we are trying to optimize the movement of robot to follow a line with the help of PID controller and CV.
