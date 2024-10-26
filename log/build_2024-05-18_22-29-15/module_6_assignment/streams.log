@@ -1,0 +1,42 @@
+[0.040s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kushal16/rse_ws/src/robotics_software_engineer/module_6_assignment -DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment
+[0.154s] -- The C compiler identification is GNU 11.4.0
+[0.248s] -- The CXX compiler identification is GNU 11.4.0
+[0.261s] -- Detecting C compiler ABI info
+[0.393s] -- Detecting C compiler ABI info - done
+[0.403s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.403s] -- Detecting C compile features
+[0.404s] -- Detecting C compile features - done
+[0.408s] -- Detecting CXX compiler ABI info
+[0.550s] -- Detecting CXX compiler ABI info - done
+[0.560s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.561s] -- Detecting CXX compile features
+[0.561s] -- Detecting CXX compile features - done
+[0.571s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.858s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.009s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.161s] -- Added test 'lint_cmake' to check CMake code style
+[1.169s] -- Added test 'xmllint' to check XML markup files
+[1.170s] -- Configuring done
+[1.175s] -- Generating done
+[1.176s] -- Build files have been written to: /home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment
+[1.189s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kushal16/rse_ws/src/robotics_software_engineer/module_6_assignment -DCMAKE_INSTALL_PREFIX=/home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment
+[1.192s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment -- -j16 -l16
+[1.265s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment -- -j16 -l16
+[1.328s] Invoking command in '/home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment
+[1.351s] -- Install configuration: ""
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/ament_index/resource_index/package_run_dependencies/module_6_assignment
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/ament_index/resource_index/parent_prefix_path/module_6_assignment
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/environment/ament_prefix_path.sh
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/environment/ament_prefix_path.dsv
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/environment/path.sh
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/environment/path.dsv
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/local_setup.bash
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/local_setup.sh
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/local_setup.zsh
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/local_setup.dsv
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/package.dsv
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/ament_index/resource_index/packages/module_6_assignment
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/cmake/module_6_assignmentConfig.cmake
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/cmake/module_6_assignmentConfig-version.cmake
+[1.352s] -- Installing: /home/kushal16/rse_ws/src/robotics_software_engineer/install/module_6_assignment/share/module_6_assignment/package.xml
+[1.374s] Invoked command in '/home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kushal16/rse_ws/src/robotics_software_engineer/build/module_6_assignment

@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<robot name="scara_robot">
+
+  <link name="base">
+    <visual>
+      <geometry>
+        <cylinder length="0.03" radius="0.3" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <material name="yellow">
+        <color rgba="1 1 0 1" />
+      </material>
+    </visual>
+  </link>
+
+  <link name="second_base_cylinder">
+    <visual>
+      <geometry>
+        <cylinder length="0.05" radius="0.15" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.03" rpy="0.0 0.0 0.0" />
+      <material name="yellow">
+        <color rgba="1.0 1.0 0.0 1.0" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.015" rpy="0.0 0.0 0" />
+    <parent link="base" />
+    <child link="second_base_cylinder" />
+    <axis xyz="0.0 0.0 0.0" />
+  </joint>
+
+  <link name="first_revoluting_cylinder">
+    <visual>
+      <geometry>
+        <cylinder length="0.9" radius="0.05" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0.0" />
+      <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="rod_joint" type="continuous">
+    <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0" />
+    <parent link="second_base_cylinder" />
+    <child link="first_revoluting_cylinder" />
+    <axis xyz="0.0 0.0 1" />
+  </joint>
+
+  <link name="first_rectangle">
+    <visual>
+      <geometry>
+        <box size="0.75 0.1 0.05" />
+      </geometry>
+      <origin xyz="0.28 0.0 0.18" rpy="0.0 0.0 3.14" />
+      <material name="blue">
+        <color rgba="0 0 1 0.85" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="first_rectangle_joint" type="continuous">
+    <origin xyz="-0.0 0.0 0.25" rpy="0.0 0.0 3.14" />
+    <parent link="first_revoluting_cylinder" />
+    <child link="first_rectangle" />
+    <axis xyz="0.0 0.0 1" />
+  </joint>
+
+  <link name="second_revoluting_cylinder">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.05" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.1" rpy="0.0 0.0 0.0" />
+      <material name="green">
+        <color rgba="0.0 1.0 0.0 1" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="rod_joint1" type="continuous">
+    <origin xyz="0.55 0.0 0.1" rpy="0.0 0.0 0" />
+    <parent link="first_rectangle" />
+    <child link="second_revoluting_cylinder" />
+    <axis xyz="0.0 0.0 1" />
+  </joint>
+
+  <link name="second_rectangle">
+    <visual>
+      <geometry>
+        <box size="0.6 0.1 0.05" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.1" rpy="0.0 0.0 0.0" />
+      <material name="purple">
+        <color rgba="1 0 1 1" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="second_rectangle_joint" type="fixed">
+    <origin xyz="0.20 0.0 0.025" rpy="0 0 0.0" />
+    <parent link="second_revoluting_cylinder" />
+    <child link="second_rectangle" />
+    <axis xyz="0.0 0.0 1" />
+  </joint>
+
+  <link name="prismatic_link">
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.35" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0" />
+      <material name="green">
+        <color rgba="0 0 1 1" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="prismatic_rectangle" type="prismatic">
+    <parent link="second_rectangle" />
+    <child link="prismatic_link" />
+    <origin xyz="0.25 0 0.05" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-0.2" upper="0.2" velocity="0.5" />
+  </joint>
+
+  <link name="gripper">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.02" />
+      </geometry>
+      <origin xyz="0.0 0.0 0.175" rpy="0.0 0.0 0.0" />
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+  </link>
+
+  <joint name="tip_joint" type="fixed">
+    <parent link="prismatic_link" />
+    <child link="gripper" />
+    <origin xyz="0.0 0.0 0.175" rpy="0 0 0" />
+  </joint>
+
+</robot>
