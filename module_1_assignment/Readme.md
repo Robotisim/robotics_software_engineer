@@ -50,6 +50,11 @@ This assignment aims to introduce basic Object-Oriented Programming (OOP) concep
 
 - **Ensure proper documentation** and use a `CMakeLists.txt` file for building the project.
 
+### Task 4: Debugging a Multi-File C++ Project
+`Task Description:`
+
+Your task is to fix and debug a multi-file C++ project for a robot simulation. The project is incomplete and contains various errors in syntax, logic, and structure. The project includes classes for Robot, actuators, and Main execution.
+
 ## Learning Outcome
 
 By completing this assignment, you will:
@@ -79,7 +84,6 @@ By completing this assignment, you will:
 5. **Submit Your Assignment:**
    - Push your changes to your forked repository.
    - Provide your repository link in the assignment submission text area.
-   - **Note**: Ensure you press the "Start Assignment" button when you see the page (as it takes time to generate the pages).
 
 6. **Wait for Review:**
    - Wait for the instructors to review your submission.

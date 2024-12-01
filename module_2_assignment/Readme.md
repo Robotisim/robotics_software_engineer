@@ -29,6 +29,17 @@ This assignment focuses on developing your ability to write custom ROS 2 nodes a
 - **Utilize ROS 2 parameters** to alter the behavior of the turtles:
   - **Change the speed** of the turtles dynamically during the simulation.
 
+### Task 5: Debugging a ROS 2 Node Using a Message Type
+`Task Description:`
+
+ Your task is to debug and fix a ROS 2 package that uses an uncommon message type, specifically std_msgs/msg/UInt8MultiArray. The node publishes and subscribes to this message type to simulate controlling the state of a robot's LEDs.
+
+`Key Focus:`
+
+- Correctly handle the UInt8MultiArray message type.
+- Debug errors related to message publishing and subscribing.
+- Fix issues in parameter handling.
+
 ## Learning Outcome
 
 By completing this assignment, you will:

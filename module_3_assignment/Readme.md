@@ -30,6 +30,21 @@ This assignment focuses on understanding and applying the concepts of URDF (Unif
 - **Create an Ackerman Drive System:**
   - **Design a car-like robot structure** that represents the front axle rotations for turning, simulating an Ackerman steering mechanism.
 
+
+### Task 4: Debugging Task - Fixing an Incorrect URDF for a Wheeled Robot with a Lifting Mechanism
+`Task Description:`
+
+This debugging task introduces a wheeled robot equipped with a lifting mechanism for carrying payloads. The provided URDF has several issues related to joint types, incorrect transforms, and missing elements. Your task is to debug the URDF and ensure the robot's model is valid and functional.
+
+`Instructions:`
+
+- Identify and fix the errors in the URDF file.
+- Verify that the lifting mechanism operates with the correct prismatic joint and range.
+- Ensure the wheels are configured correctly to enable a differential drive system.
+- Validate the corrected URDF using a ROS 2 launch file that spawns the robot in a simulated environment.
+
+
+
 ## Learning Outcome
 
 By completing this assignment, you will:
@@ -50,7 +65,6 @@ By completing this assignment, you will:
 3. **Submit Your Assignment:**
    - Push your changes to your forked repository.
    - Provide your repository link in the assignment submission text area.
-   - **Note**: Ensure you press the "Start Assignment" button when you see the page (as it takes time to generate the pages).
 
 4. **Wait for Review:**
    - Wait for the instructors to review your submission.

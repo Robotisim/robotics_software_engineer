@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot name="wheeled_robot_with_lift">
+  <link name="base_link"/>
+
+  <joint name="left_wheel_joint" type="revolut"> <!-- Incorrect joint type -->
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+
+  <link name="left_wheel">
+    <inertia ixx="0.01" iyy="0.01" izz="0.01"/> <!-- Missing visual element -->
+  </link>
+
+  <joint name="right_wheel_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <axis xyz="0 1 0"/> <!-- Incorrect axis orientation -->
+  </joint>
+
+  <link name="right_wheel">
+    <inertia ixx="0.01" iyy="0.01" izz="0.01"/> <!-- Missing visual element -->
+  </link>
+
+  <joint name="lift_joint" type="fixed"> <!-- Incorrect joint type for lifting -->
+    <parent link="base_link"/>
+    <child link="lift"/>
+  </joint>
+
+  <link name="lift">
+    <inertial>
+      <origin xyz="0 0 0.1"/>
+      <mass value="5.0"/>
+      <inertia ixx="0.02" iyy="0.02" izz="0.02"/>
+    </inertial>
+  </link>
+</robot>
