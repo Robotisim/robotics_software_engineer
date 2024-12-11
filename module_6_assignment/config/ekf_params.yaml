@@ -1,0 +1,35 @@
+ekf_node:
+  ros__parameters:
+    imu_topic: "/imu"                # Topic for IMU data
+    gps_topic: "/gps"                # Topic for GPS data
+    output_topic: "/fused_odom"      # Topic to publish fused IMU and GPS data
+
+    # Process noise covariance (Q): Represents the uncertainty in the process model
+    # State variables: [x, y, vx, vy, theta]
+    process_noise_covariance: [
+      0.1, 0.0, 0.0, 0.0, 0.0,  # x
+      0.0, 0.1, 0.0, 0.0, 0.0,  # y
+      0.0, 0.0, 0.1, 0.0, 0.0,  # vx
+      0.0, 0.0, 0.0, 0.1, 0.0,  # vy
+      0.0, 0.0, 0.0, 0.0, 0.1   # theta
+    ]
+
+    # Measurement noise covariance (R): Represents the uncertainty in sensor measurements
+    # State variables: [x, y, vx, vy, theta]
+    measurement_noise_covariance: [
+      0.5, 0.0, 0.0, 0.0, 0.0,  # x
+      0.0, 0.5, 0.0, 0.0, 0.0,  # y
+      0.0, 0.0, 0.5, 0.0, 0.0,  # vx
+      0.0, 0.0, 0.0, 0.5, 0.0,  # vy
+      0.0, 0.0, 0.0, 0.0, 0.5   # theta
+    ]
+
+    # Initial state covariance (P): Initial guess of state uncertainty
+    # State variables: [x, y, vx, vy, theta]
+    initial_state_covariance: [
+      1.0, 0.0, 0.0, 0.0, 0.0,  # x
+      0.0, 1.0, 0.0, 0.0, 0.0,  # y
+      0.0, 0.0, 1.0, 0.0, 0.0,  # vx
+      0.0, 0.0, 0.0, 1.0, 0.0,  # vy
+      0.0, 0.0, 0.0, 0.0, 1.0   # theta
+    ]
