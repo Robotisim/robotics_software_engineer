@@ -8,13 +8,14 @@ from launch_ros.actions import Node
 def generate_launch_description():
     pkg_path = os.path.join(get_package_share_directory('mapping'))
     map_yaml_file = os.path.join(pkg_path, 'map', 'map.yaml')
-    rviz_config_file = os.path.join(pkg_path,'config', 'map_loading_goal.rviz')
+    rviz_config = os.path.join(pkg_path, 'config', 'map_loading_goal.rviz')
 
     rviz = Node(
         package='rviz2',
         executable='rviz2',
-        arguments=["-d", rviz_config_file],
-        name='rviz'
+        name='rviz',
+        arguments=['-d', rviz_config],
+
     )
 
     map_server = Node(
@@ -41,6 +42,7 @@ def generate_launch_description():
             )
         ]
     )
+
 
     ld = LaunchDescription()
     ld.add_action(map_server)

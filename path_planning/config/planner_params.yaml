@@ -1,0 +1,8 @@
+planner_server:
+  ros__parameters:
+    use_sim_time: false
+    expected_planner_frequency: 20.0
+    planner_plugins: ["AstarPlanner"]
+    AstarPlanner:
+      plugin: "nav2_astar_planner::AstarPlanner"
+

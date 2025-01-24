@@ -1,6 +1,11 @@
 ## SLAM and Mapping Package
 
 This package is dedicated to teaching and implementing various SLAM (Simultaneous Localization and Mapping) and mapping techniques. The package includes tools and nodes for generating and using maps in both 2D and 3D environments, utilizing TurtleBot3 and other robots in ROS 2 simulations.
+
+### Overview
+
+The `mapping` package provides a variety of tools and nodes for SLAM and mapping, focusing on both 2D and 3D mapping techniques.
+
 #### Source Files
 
 1. **lidar_to_grid.cpp** - Converts LiDAR scan data to an occupancy grid format for mapping purposes.
@@ -8,9 +13,6 @@ This package is dedicated to teaching and implementing various SLAM (Simultaneou
 2. **occupancy_grid_pub.cpp** - Publishes an occupancy grid map based on the robot's sensor inputs.
 
 #### Launch Files
-**Note**: File names might have changed since the initial lectures, as this represents the final form of the package as it evolved by the last lecture.
-
-
 1. **maze_tb3_bringup.launch.py** - Initializes the TurtleBot3 in a simulated maze environment and sets up Gazebo, RViz, and the robot's sensors.
 
    **Purpose:**
@@ -48,6 +50,18 @@ This package is dedicated to teaching and implementing various SLAM (Simultaneou
    ```sh
    ros2 launch mapping maze_mapping_3d.launch.py
    ```
+5. **goal_with_markers.launch.launch.py** - Launches Map and Rviz config to visualize goals as markers from rviz co ordinates to map coordinates
+
+   **Purpose:**
+   - For Setting goals directly through visual markers on rviz
+
+   **Command to run:**
+   ```
+   ros2 launch mapping goal_with_markers.launch
+   ros2 run mapping marker_to_map 
+   ```
+
+
 
 ### SLAM Algorithms and Tools
 
@@ -84,8 +98,6 @@ This package is dedicated to teaching and implementing various SLAM (Simultaneou
   ros2 launch mapping maze_mapping_3d.launch.py
   ```
 
-### Test your Learnings with Assignments
-- [Assignment](https://github.com/Robotisim/robotics_software_engineer/tree/assignments/module_7_assignment)
 
 ### CMakeLists Information
 
