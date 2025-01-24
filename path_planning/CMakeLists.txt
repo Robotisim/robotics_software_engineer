@@ -15,6 +15,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(ament_cmake_gtest REQUIRED)
+find_package(nav2_core REQUIRED)
 
 include_directories(include/path_planning)
 
@@ -43,6 +44,15 @@ add_executable(path_planning_node src/path_planning.cpp)
 target_link_libraries(path_planning_node algo_astar algo_rrt algo_grid_sweep)
 ament_target_dependencies(path_planning_node rclcpp geometry_msgs nav_msgs)
 
+#Planner for Nav2 planner server
+add_library(nav2_astar_planner SHARED src/nav2_planner_interface.cpp src/algo_astar_plugin.cpp )
+ament_target_dependencies(nav2_astar_planner geometry_msgs nav2_core nav2_costmap_2d nav2_util
+                          nav_msgs rclcpp rclcpp_lifecycle rcl_interfaces tf2_ros builtin_interfaces pluginlib )
+
+
+
+pluginlib_export_plugin_description_file(nav2_core config/global_planner_plugin.xml)
+
 
 install(DIRECTORY launch config
   DESTINATION share/${PROJECT_NAME}
@@ -51,6 +61,7 @@ install(DIRECTORY launch config
 install(TARGETS
   occupancy_grid_node
   path_planning_node
+  nav2_astar_planner
   DESTINATION lib/${PROJECT_NAME}
 )
 
