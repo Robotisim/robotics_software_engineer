@@ -12,8 +12,8 @@
 #define WHEEL_RADIUS 0.033f
 
 // --- Hardware Objects ---
-EncoderSensor encoderLeft(27, 25);
-EncoderSensor encoderRight(26, 14);
+EncoderSensor encoderLeft(17, 16);
+EncoderSensor encoderRight(18, 19);
 MotorControl motorControl(13, 5, 4, 32, 18, 19, 0, 1, 5000, 8);
 
 // --- P Controller Setup ---
