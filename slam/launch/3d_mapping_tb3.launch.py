@@ -16,28 +16,10 @@ def generate_launch_description():
     4. RViz for Visualization
     """
 
-    # ------------------------------
-    # 1️⃣ Environment Selection (Gazebo World)
-    # ------------------------------
-    environments_dir = get_package_share_directory('environments')
-
-    # Default: Office Environment (You can change this dynamically)
-    selected_environment = os.path.join(environments_dir, 'launch', 'bringup_office_gz.launch.py')
-
     bringup_environment = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(selected_environment)
-    )
-
-    # ------------------------------
-    # 2️⃣ Robot Selection (Spawn in Gazebo)
-    # ------------------------------
-    robots_dir = get_package_share_directory('robots')
-
-    # Default: TurtleBot3 (Change dynamically as needed)
-    selected_robot = os.path.join(robots_dir, 'launch', 'spawn_turtlebot3.launch.py')
-
-    spawn_robot = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(selected_robot)
+        PythonLaunchDescriptionSource(
+            os.path.join(get_package_share_directory('robot_sensing'), 'launch', 'custom_sensors.launch.py')
+        )
     )
 
     # ------------------------------
@@ -125,8 +107,6 @@ def generate_launch_description():
 
         # Include Gazebo World & Robot
         bringup_environment,
-        spawn_robot,
-
         # Include RViz & RTAB-Map Nodes
         rviz_node,
         rtabmap_slam_node,

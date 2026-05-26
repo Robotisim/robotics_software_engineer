@@ -12,8 +12,19 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
-  <depend>gazebo_msgs</depend>
+  <depend>geometry_msgs</depend>
   <depend>joint_state_publisher_gui</depend>
+  <depend>controller_manager</depend>
+  <depend>gz_ros2_control</depend>
+  <depend>nav_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>rosgraph_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
 
   <export>
     <build_type>ament_cmake</build_type>

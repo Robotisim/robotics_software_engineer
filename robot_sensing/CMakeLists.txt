@@ -36,7 +36,7 @@ install(TARGETS mazeSolving lineFollowing lidar_splitter
 
 
 
-install(DIRECTORY launch worlds urdf
+install(DIRECTORY launch worlds urdf models
   DESTINATION share/${PROJECT_NAME}/
 )
 

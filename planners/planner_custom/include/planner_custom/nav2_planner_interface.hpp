@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <functional>
 
 #include "algo_astar_plugin.h"
 #include "nav2_core/global_planner.hpp"
@@ -31,7 +32,8 @@ namespace nav2_astar_planner {
 		void deactivate() override;
 
 		nav_msgs::msg::Path createPlan(geometry_msgs::msg::PoseStamped const& start,
-		                               geometry_msgs::msg::PoseStamped const& goal) override;
+		                               geometry_msgs::msg::PoseStamped const& goal,
+		                               std::function<bool()> cancel_checker) override;
 
 
 	protected:

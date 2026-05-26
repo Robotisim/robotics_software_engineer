@@ -193,7 +193,7 @@
 
 <ros2_control name="GazeboSystem" type="system">
   <hardware>
-    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    <plugin>gz_ros2_control/GazeboSimSystem</plugin>
   </hardware>
 
   <joint name="wheel_right_joint">
@@ -233,9 +233,8 @@
 
 
 <gazebo>
-    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-      <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
-      <parameters>/home/luqman/robotisim_ws/src/control_systems/config/diffbot_controller.yaml</parameters>
+    <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>__CONTROLLER_CONFIG__</parameters>
     </plugin>
 </gazebo>
 

@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "nav2_core/exceptions.hpp"
+#include "nav2_core/planner_exceptions.hpp"
 #include "nav2_costmap_2d/cost_values.hpp"
 #include "nav2_util/node_utils.hpp"
 #include "pluginlib/class_list_macros.hpp"
@@ -74,7 +74,9 @@ namespace nav2_astar_planner {
 	}
 
 	nav_msgs::msg::Path AstarPlanner::createPlan(geometry_msgs::msg::PoseStamped const& start,
-	                                             geometry_msgs::msg::PoseStamped const& goal) {
+	                                             geometry_msgs::msg::PoseStamped const& goal,
+	                                             std::function<bool()> cancel_checker) {
+		(void) cancel_checker;
 		unsigned int mx_start, my_start, mx_goal, my_goal;
 		if (!costmap_->worldToMap(start.pose.position.x, start.pose.position.y, mx_start, my_start)) {
 			RCLCPP_WARN(logger_,

@@ -5,10 +5,10 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    mapping_pkg_path = os.path.join(get_package_share_directory('slam'))
-    map_yaml_file = os.path.join(mapping_pkg_path, 'map', 'maze_2d.yaml')
-    rviz_config_file = os.path.join(get_package_share_directory('planner_custom'), 'rviz', 'nav2_steps.rviz')
-    planner_params_file = os.path.join(get_package_share_directory('planner_custom'), "config", "planner_params.yaml"
+    mapping_pkg_path = os.path.join(get_package_share_directory('mapping'))
+    map_yaml_file = os.path.join(mapping_pkg_path, 'map', 'map.yaml')
+    rviz_config_file = os.path.join(get_package_share_directory('path_planning'), 'config', 'nav2_steps.rviz')
+    planner_params_file = os.path.join(get_package_share_directory('path_planning'), "config", "planner_params.yaml"
     )
 
     nodes = [

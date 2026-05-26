@@ -196,21 +196,18 @@
 
 
   <gazebo>
-    <plugin filename="libgazebo_ros_diff_drive.so" name="gazebo_base_controller">
-      <odometry_frame>odom</odometry_frame>
-      <commandTopic>cmd_vel</commandTopic>
-      <publish_odom>true</publish_odom>
-      <publish_odom_tf>true</publish_odom_tf>
-      <update_rate>15.0</update_rate>
-
+    <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
       <left_joint>wheel_left_joint</left_joint>
       <right_joint>wheel_right_joint</right_joint>
-
       <wheel_separation>0.5</wheel_separation>
-      <wheel_diameter>0.3</wheel_diameter>
-      <max_wheel_acceleration>0.7</max_wheel_acceleration>
-      <max_wheel_torque>8</max_wheel_torque>
-      <robotBaseFrame>base</robotBaseFrame>
+      <wheel_radius>0.15</wheel_radius>
+      <max_linear_acceleration>0.7</max_linear_acceleration>
+      <topic>/cmd_vel</topic>
+      <odom_topic>/odom</odom_topic>
+      <tf_topic>/tf</tf_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base</child_frame_id>
+      <odom_publish_frequency>30</odom_publish_frequency>
     </plugin>
   </gazebo>
 
@@ -219,6 +216,7 @@
   <gazebo reference="camera">
     <sensor type="depth" name="front_camera">
       <update_rate>30.0</update_rate>
+      <topic>/camera/image_raw</topic>
       <visualize>true</visualize>
       <camera name="head">
         <horizontal_fov>1.3962634</horizontal_fov>
@@ -240,20 +238,6 @@
           <stddev>0.007</stddev>
         </noise>
       </camera>
-      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>diffbot_cam</cameraName>
-        <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>camera_link</frameName>
-        <hackBaseline>0.07</hackBaseline>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
-      </plugin>
     </sensor>
   </gazebo>
 
@@ -261,6 +245,7 @@
   <gazebo reference="lidar">
     <sensor type="gpu_ray" name="diffbot_lidar">
       <pose>0 0 0 0 0 0</pose>
+      <topic>/scan</topic>
       <visualize>false</visualize>
       <update_rate>40</update_rate>
       <ray>
@@ -287,10 +272,6 @@
           <stddev>0.01</stddev>
         </noise>
       </ray>
-      <plugin name="diffbot_lidar" filename="libgazebo_ros_ray_sensor.so">
-        <topicName>/scan</topicName>
-        <frameName>lidar</frameName>
-      </plugin>
     </sensor>
   </gazebo>
 

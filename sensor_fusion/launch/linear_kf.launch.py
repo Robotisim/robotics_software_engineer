@@ -9,18 +9,14 @@ from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 def generate_launch_description():
-    # Paths
-    turtlebot3_gazebo_path = get_package_share_directory('turtlebot3_gazebo')
     rviz_config_path = os.path.join(get_package_share_directory('sensor_fusion'), 'config', 'sensor_fusion.rviz')
 
     return LaunchDescription([
-        # Launch Gazebo with empty world
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                os.path.join(turtlebot3_gazebo_path, 'launch', 'empty_world.launch.py')
+                os.path.join(get_package_share_directory('custom_robots'), 'launch', 'gazebo.launch.py')
             )
         ),
-        # Launch RViz2 with a specific configuration file
         Node(
             package='rviz2',
             executable='rviz2',
@@ -28,7 +24,6 @@ def generate_launch_description():
             output='screen',
             arguments=['-d', rviz_config_path]
         ),
-        # Launch a_x_estimation node
         Node(
             package='sensor_fusion',
             executable='linear_kf',

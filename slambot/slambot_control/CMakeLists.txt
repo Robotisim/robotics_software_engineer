@@ -11,54 +11,57 @@ find_package(rclcpp REQUIRED)
 find_package(hardware_interface REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(ros2_control REQUIRED)
-# We don't need to find_package for libserial if it's in a standard system path
 
-# Define the C++ hardware interface as a shared library
-add_library(diffbot_system_hardware SHARED
-  src/diffbot_system.cpp
+find_path(LIBSERIAL_INCLUDE_DIR
+  NAMES libserial/SerialPort.h
+)
+find_library(LIBSERIAL_LIBRARY
+  NAMES serial
 )
 
-# Tell the compiler where to find the header files for this library
-target_include_directories(diffbot_system_hardware PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-)
+if(LIBSERIAL_INCLUDE_DIR AND LIBSERIAL_LIBRARY)
+  add_library(diffbot_system_hardware SHARED
+    src/diffbot_system.cpp
+  )
 
-# Link the library against its ROS dependencies
-ament_target_dependencies(diffbot_system_hardware PUBLIC
-    "hardware_interface"
-    "pluginlib"
-    "rclcpp"
-    "ros2_control"
-)
+  target_include_directories(diffbot_system_hardware PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    ${LIBSERIAL_INCLUDE_DIR}
+  )
 
-# --- THE FIX IS HERE ---
-# Link against the 'serial' library. CMake will correctly find 'libserial.so'.
-target_link_libraries(diffbot_system_hardware PRIVATE
-  serial
-)
+  ament_target_dependencies(diffbot_system_hardware PUBLIC
+      "hardware_interface"
+      "pluginlib"
+      "rclcpp"
+      "ros2_control"
+  )
 
-# Install the compiled library to the lib directory
-install(TARGETS
-  diffbot_system_hardware
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin
-)
+  target_link_libraries(diffbot_system_hardware PRIVATE
+    ${LIBSERIAL_LIBRARY}
+  )
 
-# Export the plugin description file for ros2_control to find it
-pluginlib_export_plugin_description_file(hardware_interface diffbot_system_hardware.xml)
+  install(TARGETS
+    diffbot_system_hardware
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
+  )
+
+  pluginlib_export_plugin_description_file(hardware_interface diffbot_system_hardware.xml)
+
+  install(FILES
+    diffbot_system_hardware.xml
+    DESTINATION share/${PROJECT_NAME}
+  )
+else()
+  message(WARNING "libserial-dev was not found; skipping DiffBotSystemHardware. Install libserial-dev to build hardware support.")
+endif()
 
 # Install the launch, urdf, and config directories
 install(DIRECTORY
   launch
   urdf
   config
-  DESTINATION share/${PROJECT_NAME}
-)
-
-# Install the plugin xml file
-install(FILES
-  diffbot_system_hardware.xml
   DESTINATION share/${PROJECT_NAME}
 )
 

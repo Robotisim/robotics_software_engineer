@@ -6,14 +6,14 @@ from launch.actions import ExecuteProcess, TimerAction
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    pkg_path = os.path.join(get_package_share_directory('slam'))
-    map_yaml_file = os.path.join(pkg_path, 'map', 'maze_2d.yaml')
+    mapping_pkg_path = get_package_share_directory('mapping')
+    map_yaml_file = os.path.join(mapping_pkg_path, 'map', 'maze_2d.yaml')
 
     rviz = Node(
         package='rviz2',
         executable='rviz2',
         name='rviz',
-        arguments=['-d', os.path.join(pkg_path, 'config', 'view_map.rviz')],
+        arguments=['-d', os.path.join(mapping_pkg_path, 'config', 'map_loading_goal.rviz')],
     )
 
     map_server = Node(

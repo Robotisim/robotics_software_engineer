@@ -13,6 +13,14 @@
 
   <depend>teleop_twist_keyboard</depend>
   <depend>joint_state_publisher_gui</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>rosgraph_msgs</depend>
+  <depend>tf2_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
